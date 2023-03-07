@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Yomakase</string>
     <string name="copyright">Copyright 3BSC. All Right Reserved</string>
+    <string name="logo_korean">요마카세</string>
+    <string name="logo_sub_korean">요즘 오마카세의 모든 것</string>
 </resources>
