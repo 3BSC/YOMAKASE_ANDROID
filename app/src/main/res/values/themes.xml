@@ -31,7 +31,6 @@
         </item>
     </style>
 
-
     <!-- 로그인화면 요마카세 -->
     <style name="logo_korean">
         <item name="android:textSize">
@@ -51,6 +50,7 @@
         </item>
     </style>
 
+    <!-- 요즘 오마카세의 모든 것 -->
     <style name="logo_sub_korean">
         <item name="android:textSize">
             13sp
@@ -64,6 +64,7 @@
         </item>
     </style>
 
+    <!-- 로그인 화면 editText 텍스트-->
     <style name="login_email">
         <item name="android:textSize">
             11sp
@@ -76,6 +77,7 @@
         </item>
     </style>
 
+    <!-- 로그인 화면 로그인(회원가입, 이메일 비밀번호 찾기) button 텍스트 -->
     <style name="btn_login_text_style">
         <item name="android:textSize">
             13sp
