@@ -90,4 +90,10 @@
         </item>
     </style>
 
+    <style name="et_join_text">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+    </style>
+
 </resources>
