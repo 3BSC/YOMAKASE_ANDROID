@@ -101,14 +101,13 @@
                 android:orientation="horizontal"
                 android:layout_marginBottom="6dp">
 
-                    <androidx.appcompat.widget.AppCompatSpinner
+                    <Spinner
                         android:id="@+id/spEmailDomain"
                         android:layout_width="200dp"
                         android:layout_height="36dp"
                         android:elevation="5dp"
                         android:gravity="left|center_vertical"
                         android:background="@drawable/spinner_email"
-
                         android:textAppearance="@style/join_text"
 
                         android:paddingStart="10dp"
@@ -129,6 +128,7 @@
                         android:text="중복검사"
                         android:textColor="@color/white"
                         android:textSize="11sp"
+
                         android:layout_marginEnd="6dp"
                         android:layout_marginStart="4dp"
                         android:layout_marginBottom="6dp"/>
@@ -242,6 +242,7 @@
                         android:layout_width="200dp"
                         android:layout_height="36dp"
                         android:background="@drawable/et_login"
+                        android:inputType="text"
                         android:layout_marginStart="6dp"
                         android:layout_marginEnd="4dp"
                         android:layout_marginBottom="6dp"
@@ -362,7 +363,7 @@
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/et_login"
                         android:elevation="5dp"
-                        android:inputType="textEmailAddress"
+                        android:inputType="number"
                         android:paddingStart="15dp"
                         android:paddingEnd="10dp"
                         android:textAppearance="@style/join_text"

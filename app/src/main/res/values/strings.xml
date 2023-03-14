@@ -3,4 +3,15 @@
     <string name="copyright">Copyright 3BSC. All Right Reserved</string>
     <string name="logo_korean">요마카세</string>
     <string name="logo_sub_korean">요즘 오마카세의 모든 것</string>
+
+    <!-- 이메일 도메인 list -->
+    <string-array name="sp_email_domain">
+        <item>"@naver.com"</item>
+        <item>"@gmail.com"</item>
+        <item>"@daum.com"</item>
+        <item>"@nate.com"</item>
+        <item>"@hotmail.com"</item>
+        <item>"직접입력"</item>
+    </string-array>
+
 </resources>
