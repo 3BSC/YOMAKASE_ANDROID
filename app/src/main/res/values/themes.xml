@@ -34,7 +34,7 @@
     <!-- 로그인화면 요마카세 -->
     <style name="logo_korean">
         <item name="android:textSize">
-            24sp
+            28sp
         </item>
         <item name="android:letterSpacing">
             0.61
@@ -43,7 +43,7 @@
             #000000
         </item>
         <item name="fontFamily">
-            @font/montserrat
+            @font/nanumgothic_extrabold
         </item>
         <item name="android:textStyle">
             bold
@@ -53,14 +53,17 @@
     <!-- 요즘 오마카세의 모든 것 -->
     <style name="logo_sub_korean">
         <item name="android:textSize">
-            13sp
+            16sp
         </item>
 
         <item name="android:textColor">
             #F88F8F
         </item>
         <item name="fontFamily">
-            @font/montserrat
+            @font/nanumgothic_bold
+        </item>
+        <item name="android:letterSpacing">
+            -0.02
         </item>
     </style>
 
@@ -93,7 +96,7 @@
     <style name="et_join_text">
         <item name="android:textSize">13sp</item>
         <item name="android:textColor">@color/black</item>
-        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="fontFamily">@font/nanumgothic_extrabold</item>
     </style>
 
 </resources>

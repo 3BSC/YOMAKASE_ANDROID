@@ -52,13 +52,12 @@
                 android:lineSpacingExtra="14sp"
                 android:text="@string/logo_sub_korean"
                 android:textAppearance="@style/logo_sub_korean"
-                android:translationY="-7.08sp"
                 />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout3"
-            android:layout_width="260dp"
+            android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -75,19 +74,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:fontFamily="@font/montserrat"
+                    android:fontFamily="@font/nanumgothic_extrabold"
                     android:text="이메일"
                     android:textColor="@color/black"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
+                    android:textSize="13sp"
+                    android:layout_marginBottom="3dp"/>
 
                 <EditText
                     android:id="@+id/etEmail"
                     android:layout_width="match_parent"
-                    android:layout_height="27dp"
+                    android:layout_height="36dp"
                     android:layout_marginStart="6dp"
                     android:layout_marginEnd="6dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/et_login"
                     android:elevation="5dp"
                     android:inputType="textEmailAddress"
@@ -100,11 +99,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp">
                 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="182dp"
-                    android:layout_height="25dp"
+                    android:layout_width="202dp"
+                    android:layout_height="36dp"
                     android:text="@naver.com"
                     android:background="@drawable/et_login"
                     android:layout_marginStart="6dp"
@@ -118,12 +118,13 @@
                     />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="60dp"
-                    android:layout_height="25dp"
+                    android:layout_width="70dp"
+                    android:layout_height="36dp"
                     android:background="@drawable/btn_login"
                     android:text="중복검사"
                     android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat"
+                    android:fontFamily="@font/nanumgothic_extrabold"
+                    android:letterSpacing="0.05"
                     android:textSize="11sp"
                     android:elevation="5dp"
                     />
@@ -138,15 +139,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:fontFamily="@font/montserrat"
+                    android:fontFamily="@font/nanumgothic_extrabold"
                     android:text="비밀번호"
                     android:textColor="@color/black"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="3dp"/>
 
                 <EditText
                     android:layout_width="match_parent"
-                    android:layout_height="27dp"
+                    android:layout_height="36dp"
                     android:layout_marginStart="6dp"
                     android:layout_marginEnd="6dp"
                     android:layout_marginBottom="6dp"
@@ -155,28 +157,30 @@
                     android:inputType="textEmailAddress"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:textSize="11sp" />
+                    android:textAppearance="@style/et_join_text" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginBottom="6dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:fontFamily="@font/montserrat"
+                    android:fontFamily="@font/nanumgothic_extrabold"
                     android:text="비밀번호 확인"
                     android:textColor="@color/black"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
+                    android:textSize="13sp"
+                    android:layout_marginBottom="3dp"
+                    />
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:layout_width="match_parent"
-                    android:layout_height="27dp"
+                    android:layout_height="36dp"
                     android:layout_marginStart="6dp"
                     android:layout_marginEnd="6dp"
                     android:layout_marginBottom="6dp"
@@ -186,7 +190,7 @@
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
                     android:textSize="11sp"
-                    android:drawableRight="@drawable/ic_hide"/>
+                    android:drawableRight="@drawable/ic_hide" />
 
             </LinearLayout>
 
@@ -200,20 +204,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:fontFamily="@font/montserrat"
+                    android:fontFamily="@font/nanumgothic_extrabold"
                     android:text="닉네임"
                     android:textColor="@color/black"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
+                    android:textSize="13sp"
+                    android:layout_marginBottom="3dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="6dp">
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:layout_width="182dp"
-                        android:layout_height="25dp"
+                        android:layout_width="202dp"
+                        android:layout_height="36dp"
                         android:background="@drawable/et_login"
                         android:layout_marginStart="6dp"
                         android:layout_marginEnd="6dp"
@@ -226,12 +231,13 @@
                         />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:layout_width="60dp"
-                        android:layout_height="25dp"
+                        android:layout_width="70dp"
+                        android:layout_height="36dp"
                         android:background="@drawable/btn_login"
                         android:text="중복검사"
                         android:textColor="@color/white"
-                        android:fontFamily="@font/montserrat"
+                        android:fontFamily="@font/nanumgothic_extrabold"
+                        android:letterSpacing="0.05"
                         android:textSize="11sp"
                         android:elevation="5dp"
                         android:layout_marginEnd="6dp"
@@ -243,22 +249,24 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginBottom="6dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:fontFamily="@font/montserrat"
+                    android:fontFamily="@font/nanumgothic_extrabold"
                     android:text="생년월일"
                     android:textColor="@color/black"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
+                    android:textSize="13sp"
+                    android:layout_marginBottom="3dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="33dp"
-                    android:orientation="horizontal">
+                    android:layout_height="42dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="6dp">
 
                     <androidx.appcompat.widget.AppCompatEditText
                         android:layout_width="0dp"
@@ -303,15 +311,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="6dp"
-                        android:fontFamily="@font/montserrat"
+                        android:fontFamily="@font/nanumgothic_extrabold"
                         android:text="휴대전화"
                         android:textColor="@color/black"
-                        android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textSize="13sp"
+                        android:layout_marginBottom="3dp"/>
 
                     <androidx.appcompat.widget.AppCompatEditText
                         android:layout_width="match_parent"
-                        android:layout_height="27dp"
+                        android:layout_height="36dp"
                         android:layout_marginStart="6dp"
                         android:layout_marginEnd="6dp"
                         android:layout_marginBottom="6dp"
@@ -320,14 +328,12 @@
                         android:inputType="textEmailAddress"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
-                        android:textSize="11sp"
-                        android:hint="010xxxxxxxx"/>
+                        android:textAppearance="@style/et_join_text"
+                        android:hint="010xxxxxxxx"
+                        android:textColorHint="@color/black"/>
 
                 </LinearLayout>
-                
 
-                
-                    
             </LinearLayout>
         </LinearLayout>
 
