@@ -13,6 +13,7 @@
         tools:context=".JoinGeneralMemberActivity">
 
         <ImageButton
+            android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_back"
@@ -22,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
-            android:id="@+id/linearLayout2"
+            android:id="@+id/linearLayoutLogo"
             android:layout_width="match_parent"
             android:layout_height="110dp"
             android:gravity="center_horizontal"
@@ -56,13 +57,12 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout3"
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutLogo">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -74,10 +74,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:fontFamily="@font/nanumgothic_extrabold"
                     android:text="이메일"
-                    android:textColor="@color/black"
-                    android:textSize="13sp"
+                    android:textAppearance="@style/join_text"
                     android:layout_marginBottom="3dp"/>
 
                 <EditText
@@ -92,7 +90,8 @@
                     android:inputType="textEmailAddress"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:textSize="11sp" />
+                    android:text="ghddbwns9808"
+                    android:textAppearance="@style/join_text"/>
 
             </LinearLayout>
             
@@ -101,33 +100,38 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="6dp">
-                
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="202dp"
-                    android:layout_height="36dp"
-                    android:text="@naver.com"
-                    android:background="@drawable/et_login"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginEnd="6dp"
-                    android:layout_marginBottom="6dp"
-                    android:elevation="5dp"
-                    android:gravity="left|center_vertical"
-                    android:paddingEnd="10dp"
-                    android:textAppearance="@style/et_join_text"
-                    android:drawableLeft="@drawable/ic_down_arrow"
-                    />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="70dp"
-                    android:layout_height="36dp"
-                    android:background="@drawable/btn_login"
-                    android:text="중복검사"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/nanumgothic_extrabold"
-                    android:letterSpacing="0.05"
-                    android:textSize="11sp"
-                    android:elevation="5dp"
-                    />
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spEmailDomain"
+                        android:layout_width="200dp"
+                        android:layout_height="36dp"
+                        android:elevation="5dp"
+                        android:gravity="left|center_vertical"
+                        android:background="@drawable/spinner_email"
+
+                        android:textAppearance="@style/join_text"
+
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="6dp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnEmailDuplicatedCheck"
+                        android:layout_width="70dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/btn_login"
+                        android:elevation="5dp"
+                        android:fontFamily="@font/nanumgothic_extrabold"
+                        android:letterSpacing="0.05"
+                        android:text="중복검사"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginBottom="6dp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -139,14 +143,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:fontFamily="@font/nanumgothic_extrabold"
                     android:text="비밀번호"
-                    android:textColor="@color/black"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:textAppearance="@style/join_text"
                     android:layout_marginBottom="3dp"/>
 
                 <EditText
+                    android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
                     android:layout_marginStart="6dp"
@@ -154,10 +156,10 @@
                     android:layout_marginBottom="6dp"
                     android:background="@drawable/et_login"
                     android:elevation="5dp"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textPassword"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:textAppearance="@style/et_join_text" />
+                    android:textAppearance="@style/join_text" />
 
             </LinearLayout>
 
@@ -171,27 +173,48 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:fontFamily="@font/nanumgothic_extrabold"
                     android:text="비밀번호 확인"
-                    android:textColor="@color/black"
-                    android:textSize="13sp"
-                    android:layout_marginBottom="3dp"
-                    />
+                    android:textAppearance="@style/join_text"
+                    android:layout_marginBottom="3dp" />
 
-                <androidx.appcompat.widget.AppCompatEditText
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="36dp"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginEnd="6dp"
-                    android:layout_marginBottom="6dp"
-                    android:background="@drawable/et_login"
-                    android:elevation="5dp"
-                    android:inputType="textEmailAddress"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:textSize="11sp"
-                    android:drawableRight="@drawable/ic_hide" />
+                    android:layout_height="wrap_content"
+                    >
 
+                    <ImageButton
+                        android:id="@+id/btnPasswordHide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:translationZ="25dp"
+                        app:layout_constraintBottom_toBottomOf="@id/etPasswordCheck"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/etPasswordCheck"
+                        android:background="@drawable/ic_hide"/>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etPasswordCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginBottom="6dp"
+
+                        android:background="@drawable/et_login"
+                        android:elevation="5dp"
+                        android:inputType="textPassword"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+
+                        android:textAppearance="@style/join_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
 
 
@@ -204,10 +227,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:fontFamily="@font/nanumgothic_extrabold"
                     android:text="닉네임"
-                    android:textColor="@color/black"
-                    android:textSize="13sp"
+                    android:textAppearance="@style/join_text"
                     android:layout_marginBottom="3dp"/>
 
                 <LinearLayout
@@ -217,20 +238,22 @@
                     android:layout_marginBottom="6dp">
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:layout_width="202dp"
+                        android:id="@+id/etNickname"
+                        android:layout_width="200dp"
                         android:layout_height="36dp"
                         android:background="@drawable/et_login"
                         android:layout_marginStart="6dp"
-                        android:layout_marginEnd="6dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_marginBottom="6dp"
                         android:elevation="5dp"
                         android:gravity="left|center_vertical"
-                        android:paddingStart="10dp"
-                        android:paddingEnd="10dp"
-                        android:textAppearance="@style/et_join_text"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="5dp"
+                        android:textAppearance="@style/join_text"
                         />
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNicknameDuplicatedCheck"
                         android:layout_width="70dp"
                         android:layout_height="36dp"
                         android:background="@drawable/btn_login"
@@ -241,6 +264,7 @@
                         android:textSize="11sp"
                         android:elevation="5dp"
                         android:layout_marginEnd="6dp"
+                        android:layout_marginStart="4dp"
                         android:layout_marginBottom="6dp"
                         />
                 </LinearLayout>
@@ -256,10 +280,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:fontFamily="@font/nanumgothic_extrabold"
                     android:text="생년월일"
-                    android:textColor="@color/black"
-                    android:textSize="13sp"
+                    android:textAppearance="@style/join_text"
                     android:layout_marginBottom="3dp"/>
 
                 <LinearLayout
@@ -268,38 +290,54 @@
                     android:orientation="horizontal"
                     android:layout_marginBottom="6dp">
 
-                    <androidx.appcompat.widget.AppCompatEditText
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spYear"
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="2023년"
-                        android:background="@drawable/et_login"
-                        android:textAppearance="@style/et_join_text"
-                        android:gravity="center"
+                        android:layout_height="36dp"
+                        android:layout_weight="3"
                         android:elevation="5dp"
-                        android:layout_marginBottom="6dp"
-                        android:layout_marginStart="6dp"/>
+                        android:gravity="left|center_vertical"
+                        android:background="@drawable/spinner_email"
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/et_login"
-                        android:elevation="5dp"
-                        android:layout_marginBottom="6dp"
-                        android:layout_marginStart="6dp"
-                        android:drawableLeft="@drawable/ic_down_arrow"/>
+                        android:textAppearance="@style/join_text"
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/et_login"
-                        android:elevation="5dp"
-                        android:layout_marginBottom="6dp"
+                        android:paddingStart="10dp"
                         android:layout_marginStart="6dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="6dp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spMonth"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="2"
+                        android:elevation="5dp"
+                        android:gravity="left|center_vertical"
+                        android:background="@drawable/spinner_email"
+
+                        android:textAppearance="@style/join_text"
+
+                        android:paddingStart="10dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="6dp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spDate"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="2"
+                        android:elevation="5dp"
+                        android:gravity="left|center_vertical"
+                        android:background="@drawable/spinner_email"
+
+                        android:textAppearance="@style/join_text"
+
+                        android:paddingStart="10dp"
                         android:layout_marginEnd="6dp"
-                        android:drawableLeft="@drawable/ic_down_arrow"/>
+                        android:layout_marginBottom="6dp"
+                        />
                 </LinearLayout>
 
                 <LinearLayout
@@ -311,26 +349,25 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="6dp"
-                        android:fontFamily="@font/nanumgothic_extrabold"
                         android:text="휴대전화"
-                        android:textColor="@color/black"
-                        android:textSize="13sp"
+                        android:textAppearance="@style/join_text"
                         android:layout_marginBottom="3dp"/>
 
                     <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etPhonNumber"
                         android:layout_width="match_parent"
                         android:layout_height="36dp"
                         android:layout_marginStart="6dp"
                         android:layout_marginEnd="6dp"
-                        android:layout_marginBottom="6dp"
+                        android:layout_marginBottom="10dp"
                         android:background="@drawable/et_login"
                         android:elevation="5dp"
                         android:inputType="textEmailAddress"
-                        android:paddingStart="10dp"
+                        android:paddingStart="15dp"
                         android:paddingEnd="10dp"
-                        android:textAppearance="@style/et_join_text"
+                        android:textAppearance="@style/join_text"
                         android:hint="010xxxxxxxx"
-                        android:textColorHint="@color/black"/>
+                        android:letterSpacing="0.15"/>
 
                 </LinearLayout>
 
@@ -341,9 +378,11 @@
         <!-- 최 하단 카피라이트 -->
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="238dp"
+            android:layout_width="278dp"
             android:layout_height="38dp"
             android:layout_marginBottom="22dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:background="@drawable/btn_login"
             android:elevation="10dp"
             android:text="회원가입"
