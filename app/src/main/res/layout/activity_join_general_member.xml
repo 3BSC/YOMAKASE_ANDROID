@@ -191,7 +191,9 @@
                         app:layout_constraintBottom_toBottomOf="@id/etPasswordCheck"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@id/etPasswordCheck"
-                        android:background="@drawable/ic_hide"/>
+                        android:background="@drawable/ic_show"
+                        android:tag="0"
+                        android:onClick="visiblePassword"/>
 
                     <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/etPasswordCheck"
@@ -248,7 +250,7 @@
                         android:layout_marginBottom="6dp"
                         android:elevation="5dp"
                         android:gravity="left|center_vertical"
-                        android:paddingStart="6dp"
+                        android:paddingStart="10dp"
                         android:paddingEnd="5dp"
                         android:textAppearance="@style/join_text"
                         />
@@ -287,56 +289,40 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="42dp"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginBottom="6dp">
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spYear"
-                        android:layout_width="0dp"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvBirth"
+                        android:layout_width="200dp"
                         android:layout_height="36dp"
-                        android:layout_weight="3"
-                        android:elevation="5dp"
-                        android:gravity="left|center_vertical"
-                        android:background="@drawable/spinner_email"
-
-                        android:textAppearance="@style/join_text"
-
-                        android:paddingStart="10dp"
+                        android:background="@drawable/et_login"
+                        android:inputType="text"
                         android:layout_marginStart="6dp"
                         android:layout_marginEnd="4dp"
                         android:layout_marginBottom="6dp"
-                        />
-
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spMonth"
-                        android:layout_width="0dp"
-                        android:layout_height="36dp"
-                        android:layout_weight="2"
                         android:elevation="5dp"
                         android:gravity="left|center_vertical"
-                        android:background="@drawable/spinner_email"
-
-                        android:textAppearance="@style/join_text"
-
                         android:paddingStart="10dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginBottom="6dp"
+                        android:paddingEnd="5dp"
+                        android:textAppearance="@style/join_text"
                         />
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spDate"
-                        android:layout_width="0dp"
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnDatePicker"
+                        android:layout_width="70dp"
                         android:layout_height="36dp"
-                        android:layout_weight="2"
+                        android:background="@drawable/btn_login"
+                        android:text="선택하기"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/nanumgothic_extrabold"
+                        android:letterSpacing="0.05"
+                        android:textSize="11sp"
                         android:elevation="5dp"
-                        android:gravity="left|center_vertical"
-                        android:background="@drawable/spinner_email"
-
-                        android:textAppearance="@style/join_text"
-
-                        android:paddingStart="10dp"
+                        android:onClick="dataPicker"
                         android:layout_marginEnd="6dp"
+                        android:layout_marginStart="4dp"
                         android:layout_marginBottom="6dp"
                         />
                 </LinearLayout>
