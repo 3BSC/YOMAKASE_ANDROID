@@ -70,13 +70,27 @@
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:text="이메일"
-                    android:textAppearance="@style/join_text"
-                    android:layout_marginBottom="3dp"/>
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="이메일"
+                        android:textAppearance="@style/join_text"
+                        android:layout_marginBottom="3dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textAppearance="@style/join_text"
+                        android:textColor="@color/red"
+                        android:gravity="top"
+                        android:layout_marginStart="1dp"/>
+                </LinearLayout>
 
                 <EditText
                     android:id="@+id/etEmail"
@@ -139,13 +153,27 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:text="비밀번호"
-                    android:textAppearance="@style/join_text"
-                    android:layout_marginBottom="3dp"/>
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="비밀번호"
+                        android:textAppearance="@style/join_text"
+                        android:layout_marginBottom="3dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textAppearance="@style/join_text"
+                        android:textColor="@color/red"
+                        android:gravity="top"
+                        android:layout_marginStart="1dp"/>
+                </LinearLayout>
 
                 <EditText
                     android:id="@+id/etPassword"
@@ -169,13 +197,27 @@
                 android:orientation="vertical"
                 android:layout_marginBottom="6dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:text="비밀번호 확인"
-                    android:textAppearance="@style/join_text"
-                    android:layout_marginBottom="3dp" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="비밀번호 확인"
+                        android:textAppearance="@style/join_text"
+                        android:layout_marginBottom="3dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textAppearance="@style/join_text"
+                        android:textColor="@color/red"
+                        android:gravity="top"
+                        android:layout_marginStart="1dp"/>
+                </LinearLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -225,13 +267,27 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:text="닉네임"
-                    android:textAppearance="@style/join_text"
-                    android:layout_marginBottom="3dp"/>
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="닉네임"
+                        android:textAppearance="@style/join_text"
+                        android:layout_marginBottom="3dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textAppearance="@style/join_text"
+                        android:textColor="@color/red"
+                        android:gravity="top"
+                        android:layout_marginStart="1dp"/>
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -279,13 +335,27 @@
                 android:orientation="vertical"
                 android:layout_marginBottom="6dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:text="생년월일"
-                    android:textAppearance="@style/join_text"
-                    android:layout_marginBottom="3dp"/>
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="생년월일"
+                        android:textAppearance="@style/join_text"
+                        android:layout_marginBottom="3dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textAppearance="@style/join_text"
+                        android:textColor="@color/red"
+                        android:gravity="top"
+                        android:layout_marginStart="1dp"/>
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -332,13 +402,27 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="6dp"
-                        android:text="휴대전화"
-                        android:textAppearance="@style/join_text"
-                        android:layout_marginBottom="3dp"/>
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="휴대전화"
+                            android:textAppearance="@style/join_text"
+                            android:layout_marginBottom="3dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:textAppearance="@style/join_text"
+                            android:textColor="@color/red"
+                            android:gravity="top"
+                            android:layout_marginStart="1dp"/>
+                    </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/etPhonNumber"
