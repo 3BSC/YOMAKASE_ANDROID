@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".JoinOwnerMemberActivity"
+        android:backgroundTint="@color/white">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_back"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutLogo"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="5dp"
+            android:layout_marginBottom="6dp"
+            android:backgroundTint="@color/white"
+            >
+
+            <!-- 요마카세 -->
+            <TextView
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|top"
+                android:lineSpacingExtra="1sp"
+                android:text="@string/logo_korean"
+                android:textAppearance="@style/logo_korean"
+                android:translationY="-0.37sp"
+                android:layout_marginTop="46dp"/>
+
+            <!-- 요즘 오마카세의 모든 것 -->
+            <TextView
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|top"
+                android:lineSpacingExtra="14sp"
+                android:text="@string/logo_sub_korean"
+                android:textAppearance="@style/logo_sub_korean"
+                />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnJoin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutLogo"
+            android:layout_marginBottom="5dp">
+
+
+            <LinearLayout
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutLogo">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginBottom="3dp"
+                            android:text="이메일"
+                            android:textAppearance="@style/join_text" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="1dp"
+                            android:gravity="top"
+                            android:text="*"
+                            android:textAppearance="@style/join_text"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/et_login"
+                        android:elevation="5dp"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="ghddbwns9808"
+                        android:textAppearance="@style/join_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spEmailDomain"
+                        android:layout_width="200dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@drawable/spinner_email"
+
+                        android:elevation="5dp"
+                        android:gravity="left|center_vertical"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textAppearance="@style/join_text" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnEmailDuplicatedCheck"
+                        android:layout_width="70dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@drawable/btn_login"
+                        android:elevation="5dp"
+                        android:fontFamily="@font/nanumgothic_extrabold"
+                        android:letterSpacing="0.05"
+
+                        android:text="중복검사"
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginBottom="3dp"
+                            android:text="비밀번호"
+                            android:textAppearance="@style/join_text" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="1dp"
+                            android:gravity="top"
+                            android:text="*"
+                            android:textAppearance="@style/join_text"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@drawable/et_login"
+                        android:elevation="5dp"
+                        android:inputType="textPassword"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textAppearance="@style/join_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginBottom="3dp"
+                            android:text="비밀번호 확인"
+                            android:textAppearance="@style/join_text" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="1dp"
+                            android:gravity="top"
+                            android:text="*"
+                            android:textAppearance="@style/join_text"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/btnPasswordHide"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:background="@drawable/ic_show"
+                            android:onClick="visiblePassword"
+                            android:tag="0"
+                            android:translationZ="25dp"
+                            app:layout_constraintBottom_toBottomOf="@id/etPasswordCheck"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/etPasswordCheck" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etPasswordCheck"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="6dp"
+
+                            android:background="@drawable/et_login"
+                            android:elevation="5dp"
+                            android:inputType="textPassword"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+
+                            android:textAppearance="@style/join_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="6dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginBottom="3dp"
+                            android:text="닉네임"
+                            android:textAppearance="@style/join_text" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="1dp"
+                            android:gravity="top"
+                            android:text="*"
+                            android:textAppearance="@style/join_text"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etNickname"
+                            android:layout_width="200dp"
+                            android:layout_height="36dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="6dp"
+                            android:background="@drawable/et_login"
+                            android:elevation="5dp"
+                            android:gravity="left|center_vertical"
+                            android:inputType="text"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="5dp"
+                            android:textAppearance="@style/join_text" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnNicknameDuplicatedCheck"
+                            android:layout_width="70dp"
+                            android:layout_height="36dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:background="@drawable/btn_login"
+                            android:elevation="5dp"
+                            android:fontFamily="@font/nanumgothic_extrabold"
+                            android:letterSpacing="0.05"
+                            android:text="중복검사"
+                            android:textColor="@color/white"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginBottom="3dp"
+                            android:text="생년월일"
+                            android:textAppearance="@style/join_text" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="1dp"
+                            android:gravity="top"
+                            android:text="*"
+                            android:textAppearance="@style/join_text"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvBirth"
+                            android:layout_width="200dp"
+                            android:layout_height="36dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="6dp"
+                            android:background="@drawable/et_login"
+                            android:elevation="5dp"
+                            android:gravity="left|center_vertical"
+                            android:inputType="text"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="5dp"
+                            android:textAppearance="@style/join_text" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnDatePicker"
+                            android:layout_width="70dp"
+                            android:layout_height="36dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:background="@drawable/btn_login"
+                            android:elevation="5dp"
+                            android:fontFamily="@font/nanumgothic_extrabold"
+                            android:letterSpacing="0.05"
+                            android:onClick="dataPicker"
+                            android:text="선택하기"
+                            android:textColor="@color/white"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginBottom="3dp"
+                            android:text="휴대전화"
+                            android:textAppearance="@style/join_text" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="1dp"
+                            android:gravity="top"
+                            android:text="*"
+                            android:textAppearance="@style/join_text"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etPhonNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/et_login"
+                        android:elevation="5dp"
+                        android:hint="010xxxxxxxx"
+                        android:inputType="number"
+                        android:letterSpacing="0.15"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="10dp"
+                        android:textAppearance="@style/join_text" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+        <!-- 최 하단 카피라이트 -->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnJoin"
+            android:layout_width="278dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/btn_login"
+            android:elevation="10dp"
+            android:text="회원가입"
+            android:textAppearance="@style/btn_login_text_style"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|top"
+            android:text="@string/copyright"
+            android:textAppearance="@style/copyright"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.971" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
