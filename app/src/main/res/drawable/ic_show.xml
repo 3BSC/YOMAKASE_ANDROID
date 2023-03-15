@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/_ic_show"
+        android:width="25dp"
+        android:height="23dp"
+        tools:ignore="ResourceCycle" />
+
+</layer-list>
