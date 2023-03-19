@@ -59,7 +59,7 @@
                 android:lineSpacingExtra="14sp"
                 android:text="@string/logo_sub_korean"
                 android:textAppearance="@style/logo_sub_korean"
-                android:translationY="-7.08sp" />
+                 />
         </LinearLayout>
 
         <LinearLayout
