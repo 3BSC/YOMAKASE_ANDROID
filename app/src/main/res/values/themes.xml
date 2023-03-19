@@ -102,4 +102,11 @@
         <item name="fontFamily">@font/nanumgothic_extrabold</item>
     </style>
 
+    <style name="join_small_btn_text">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/nanumgothic_extrabold</item>
+        <item name="android:letterSpacing">0.15</item>
+    </style>
+
 </resources>
