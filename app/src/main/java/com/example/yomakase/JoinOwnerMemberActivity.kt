@@ -26,8 +26,20 @@ class JoinOwnerMemberActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_join_owner_member)
         setupSpinnerCategory()
         setupSpinnerEmailDomain()
+        setupSpinnerPrice()
         setupSpinnerHandler()
         setTodayDate()
+    }
+
+    private fun setupSpinnerPrice() {
+        val priceDays = resources.getStringArray(R.array.sp_price_day)
+        val priceTimes = resources.getStringArray(R.array.sp_price_time)
+        val priceDayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, priceDays)
+        val priceTimeAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, priceTimes)
+        priceDayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        priceTimeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.spPriceDay.adapter = priceDayAdapter
+        binding.spPriceTime.adapter = priceTimeAdapter
     }
 
     private fun setupSpinnerCategory() {

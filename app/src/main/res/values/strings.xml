@@ -22,4 +22,19 @@
         <item>"이모카세"</item>
         <item>"기타"</item>
     </string-array>
+
+    <!-- 가격정보 날짜 list -->
+    <string-array name="sp_price_day">
+        <item>"평일"</item>
+        <item>"주말"</item>
+        <item>"공휴일"</item>
+        <item>"구분 없음"</item>
+    </string-array>
+
+    <!-- 가격정보 시간 list -->
+    <string-array name="sp_price_time">
+        <item>"런치"</item>
+        <item>"디너"</item>
+        <item>"구분 없음"</item>
+    </string-array>
 </resources>
