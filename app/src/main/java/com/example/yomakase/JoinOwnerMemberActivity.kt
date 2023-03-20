@@ -80,7 +80,7 @@ class JoinOwnerMemberActivity : AppCompatActivity() {
         binding.tvBirth.text = dateFormat.format(Date(System.currentTimeMillis()))
     }
 
-    fun dataPicker(view: View){
+    fun datePicker(view: View){
         val cal = Calendar.getInstance()
         val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
             binding.tvBirth.text = "$year-${month+1}-$dayOfMonth"
