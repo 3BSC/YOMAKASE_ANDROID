@@ -1,8 +1,11 @@
 package com.example.yomakase
 
 import android.app.DatePickerDialog
+import android.app.TimePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
@@ -12,6 +15,7 @@ import android.widget.ArrayAdapter
 import androidx.databinding.DataBindingUtil
 import com.example.yomakase.databinding.ActivityJoinGeneralMemberBinding
 import com.example.yomakase.databinding.ActivityJoinOwnerMemberBinding
+import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -87,6 +91,34 @@ class JoinOwnerMemberActivity : AppCompatActivity() {
         }
         DatePickerDialog(this, android.R.style.Theme_Holo_Light_Dialog_NoActionBar
             ,dateSetListener, cal.get(Calendar.YEAR),cal.get(Calendar.MONTH),cal.get(Calendar.DAY_OF_MONTH)).show()
+    }
+    fun timePicker(view: View){
+        val cal = Calendar.getInstance()
+        val timeSetListener = TimePickerDialog.OnTimeSetListener {time, hour, min ->
+            val timeFormatted = "${hour.toString().padStart(2, '0')} : ${min.toString().padStart(2, '0')}"
+            when(view.id){
+                R.id.tvOpeningHoursStart -> {binding.tvOpeningHoursStart.text = timeFormatted}
+                R.id.tvOpeningHoursEnd -> {binding.tvOpeningHoursEnd.text = timeFormatted}
+                R.id.tvBreakTimeStart -> {binding.tvBreakTimeStart.text = timeFormatted}
+                R.id.tvBreakTimeEnd -> {binding.tvBreakTimeEnd.text = timeFormatted}
+            }
+        }
+
+        TimePickerDialog(this, timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE),false).show()
+    }
+
+    private fun textWatcher(){
+        binding.etExplain.addTextChangedListener(object: TextWatcher{
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+
+            override fun afterTextChanged(p0: Editable?) {
+                if(binding.etExplain.length() > 200){
+                    binding.etExplain.error = "200자를 초과했습니다."
+                }
+            }
+
+        })
     }
 
     fun visiblePassword(view: View){

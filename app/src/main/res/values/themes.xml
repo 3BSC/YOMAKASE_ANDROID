@@ -109,4 +109,13 @@
         <item name="android:letterSpacing">0.15</item>
     </style>
 
+    <style name="store_explain_text" parent="Widget.Design.TextInputLayout"> // important : parent 를 이것으로.
+        <item name="colorControlNormal">@color/et_login_pink</item>  // unFocus 상태일때 밑줄 색.
+        <item name="colorControlActivated">@color/theme_pink</item> // Focus 상태일때 밑줄 색.
+        <item name="android:textCursorDrawable">@color/black</item>  // cursor 색.
+        <item name="android:textAppearance">@style/join_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="counterOverflowTextColor">@color/theme_pink</item>
+    </style>
+
 </resources>
