@@ -980,6 +980,33 @@
                     </LinearLayout>
                 </LinearLayout>
 
+                <!-- 휴무일 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="휴무일"
+                        android:textAppearance="@style/join_text" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvClosedDays"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/et_login"
+                        android:elevation="4dp"
+                        android:padding="4dp"/>
+
+                </LinearLayout>
+
                 <!-- 편의시설 -->
                 <LinearLayout
                     android:layout_width="match_parent"

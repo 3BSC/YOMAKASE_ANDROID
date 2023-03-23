@@ -30,11 +30,13 @@ class JoinOwnerMemberActivity : AppCompatActivity() {
     private var pwVisible = false
     private lateinit var priceList : MutableList<Price>
     private lateinit var priceAdapter: PriceAdapter
+    private lateinit var closedDays: MutableList<ClosedDay>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_join_owner_member)
 
+        setUpClosedDayRv()
         setUpPriceRv()
         setupSpinnerCategory()
         setupSpinnerEmailDomain()
@@ -137,11 +139,32 @@ class JoinOwnerMemberActivity : AppCompatActivity() {
         priceList = mutableListOf()
         priceList.add(Price("주말", "디너", 50000))
         priceList.add(Price("평일", "디너", 34000))
-        priceAdapter = PriceAdapter(priceList, onClickRemoveBtn = {removePrice(it)})
+        priceAdapter = PriceAdapter(priceList, onClickRemoveBtn = { removePrice(it)})
 
         binding.rvPrice.apply {
             adapter = priceAdapter
             layoutManager = LinearLayoutManager(applicationContext)
+        }
+    }
+
+    private fun setUpClosedDayRv(){
+        closedDays = mutableListOf()
+        var closedDayList = mutableListOf(ClosedDay("일요일"), ClosedDay("월요일"),ClosedDay("화요일"),ClosedDay("수요일"),
+            ClosedDay("목요일"),ClosedDay("금요일"),ClosedDay("토요일"),ClosedDay("공휴일"))
+        var closedDayAdapter = ClosedDayAdapter(closedDayList, onClickItemListener = {it, position ->
+            if(it.tag == "0"){
+                it.setBackgroundResource(R.drawable.btn_login)
+                it.tag = "1"
+                closedDays.add(closedDayList[position])
+            }else{
+                it.setBackgroundResource(R.drawable.btn_unclicked)
+                it.tag = "0"
+                closedDays.remove(closedDayList[position])
+            }
+        })
+        binding.rvClosedDays.apply {
+            adapter = closedDayAdapter
+            layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.HORIZONTAL, false)
         }
     }
 
