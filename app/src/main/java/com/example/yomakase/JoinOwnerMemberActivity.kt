@@ -1,6 +1,7 @@
 package com.example.yomakase
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Context
@@ -23,7 +24,7 @@ import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
 import java.util.*
 
-class JoinOwnerMemberActivity : AppCompatActivity() {
+class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface{
 
     lateinit var binding: ActivityJoinOwnerMemberBinding
     private val dateFormat = SimpleDateFormat("yyyy-MM-dd")
@@ -31,6 +32,12 @@ class JoinOwnerMemberActivity : AppCompatActivity() {
     private lateinit var priceList : MutableList<Price>
     private lateinit var priceAdapter: PriceAdapter
     private lateinit var closedDays: MutableList<ClosedDay>
+    private var selectedFacilities = mutableListOf<DialogFacility>()
+    private var facilityDialog : FacilityDialog = FacilityDialog(this, this, selectedFacilities.toList())
+
+    init {
+        facilityDialog.isCancelable = false
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +50,7 @@ class JoinOwnerMemberActivity : AppCompatActivity() {
         setupSpinnerPrice()
         setupSpinnerHandler()
         setTodayDate()
+        setUpFacilityRv()
     }
 
     private fun setupSpinnerPrice() {
@@ -184,6 +192,23 @@ class JoinOwnerMemberActivity : AppCompatActivity() {
             )
         )
         priceAdapter.notifyDataSetChanged()
+    }
+
+    private fun setUpFacilityRv(){
+        binding.rvFacilities.apply {
+            adapter = FacilityAdapter(selectedFacilities)
+            layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.HORIZONTAL ,false)
+        }
+    }
+
+    fun openFacilityDialog(view: View){
+        facilityDialog.preSelected = selectedFacilities.toList()
+        facilityDialog.show(this.supportFragmentManager, "Facility")
+    }
+
+    override fun onOkBtnClicked(selected: MutableList<DialogFacility>) {
+        selectedFacilities = selected
+        setUpFacilityRv()
     }
 
 }

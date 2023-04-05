@@ -1029,17 +1029,19 @@
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/rvFacilities"
                             android:layout_width="match_parent"
-                            android:layout_height="46dp"
+                            android:layout_height="wrap_content"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             android:layout_marginStart="6dp"
                             android:layout_marginEnd="6dp"
+                            android:paddingRight="30dp"
                             android:layout_marginBottom="10dp"
                             android:background="@drawable/et_login"
                             android:elevation="4dp"
-                            android:padding="5dp"/>
+                            android:padding="5dp"
+                            android:minHeight="35dp"/>
 
                         <ImageButton
                             android:id="@+id/btnAddFacilities"
@@ -1050,7 +1052,10 @@
                             app:layout_constraintTop_toTopOf="@id/rvFacilities"
                             app:layout_constraintBottom_toBottomOf="@id/rvFacilities"
                             android:elevation="5dp"
-                            android:layout_marginEnd="5dp"/>
+                            android:layout_marginEnd="5dp"
+                            android:clickable="true"
+                            android:onClick="openFacilityDialog"/>
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>

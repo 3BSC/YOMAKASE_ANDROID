@@ -47,8 +47,7 @@
                 android:gravity="center_horizontal|top"
                 android:lineSpacingExtra="1sp"
                 android:text="@string/logo_korean"
-                android:textAppearance="@style/logo_korean"
-                android:translationY="-0.37sp" />
+                android:textAppearance="@style/logo_korean" />
 
             <!-- 요즘 오마카세의 모든 것 -->
             <TextView
@@ -57,8 +56,7 @@
                 android:gravity="center_horizontal|top"
                 android:lineSpacingExtra="14sp"
                 android:text="@string/logo_sub_korean"
-                android:textAppearance="@style/logo_sub_korean"
-                android:translationY="-7.08sp" />
+                android:textAppearance="@style/logo_sub_korean" />
 
             <LinearLayout
                 android:layout_width="match_parent"
