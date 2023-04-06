@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:text="@{facility.name}"
             android:textAppearance="@style/join_text"
-            android:textSize="28sp"
+            android:textSize="22sp"
             android:layout_marginStart="10dp"
             app:layout_constraintLeft_toRightOf="@id/ivFacility"
             app:layout_constraintTop_toTopOf="parent"

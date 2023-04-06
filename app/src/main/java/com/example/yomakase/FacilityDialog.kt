@@ -77,8 +77,8 @@ class FacilityDialog(facilityDialogInterface: FacilityDialogInterface, context: 
         val params: ViewGroup.LayoutParams? = dialog?.window?.attributes
         val deviceWidth = size.x
         val deviceHeight = size.y
-        params?.width = (deviceWidth * 0.8).toInt()
-        params?.height = (deviceHeight * 0.55).toInt()
+        params?.width = (deviceWidth * 0.9).toInt()
+        params?.height = (deviceHeight * 0.6).toInt()
         dialog?.window?.attributes = params as WindowManager.LayoutParams
     }
 }
