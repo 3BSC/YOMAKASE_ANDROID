@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Yomakase"
         tools:targetApi="31">
         <activity
-            android:name=".FindAccountActivity"
+            android:name=".JoinOwnerMemberActivity"
             android:exported="false" />
         <activity
             android:name=".JoinGeneralMemberActivity"
