@@ -27,15 +27,6 @@ class ClosedDayAdapter(private val closedDayList:List<ClosedDay>,val onClickItem
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(closedDayList[position])
         holder.binding.btnDay.setOnClickListener {
-            /**
-            if(it.tag == "0"){
-                it.setBackgroundResource(R.drawable.btn_login)
-                it.tag = "1"
-            }else{
-                it.setBackgroundResource(R.drawable.btn_unclicked)
-                it.tag = "0"
-             }
-             **/
              onClickItemListener(it, position)
         }
     }
