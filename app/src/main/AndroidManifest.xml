@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- For Under SDK VERSION TIRAMISU -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- For SDK VERSION TIRAMISU Or Over -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +17,7 @@
         android:theme="@style/Theme.Yomakase"
         tools:targetApi="31">
         <activity
-            android:name=".FindAccountActivity"
+            android:name=".JoinOwnerMemberActivity"
             android:exported="false" />
         <activity
             android:name=".JoinGeneralMemberActivity"
