@@ -1,43 +1,69 @@
 package com.example.yomakase
 
 import android.annotation.SuppressLint
-import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
-import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
+import android.provider.MediaStore
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.yomakase.databinding.ActivityJoinGeneralMemberBinding
 import com.example.yomakase.databinding.ActivityJoinOwnerMemberBinding
-import com.google.android.material.textfield.TextInputEditText
+import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
+import android.Manifest
+import android.widget.Toast
 
 class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface{
 
     lateinit var binding: ActivityJoinOwnerMemberBinding
     private val dateFormat = SimpleDateFormat("yyyy-MM-dd")
     private var pwVisible = false
+    private var imageFile: File? = null
     private lateinit var priceList : MutableList<Price>
     private lateinit var priceAdapter: PriceAdapter
     private lateinit var closedDays: MutableList<ClosedDay>
     private var selectedFacilities = mutableListOf<DialogFacility>()
-    private var facilityDialog : FacilityDialog = FacilityDialog(this, this, selectedFacilities.toList())
+    private var facilityDialog : FacilityDialog = FacilityDialog(this, this, selectedFacilities.toList()).apply { isCancelable = false }
 
-    init {
-        facilityDialog.isCancelable = false
-    }
+    private val galleryPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isPermitted ->
+            if (isPermitted){
+                val intent = Intent(Intent.ACTION_PICK)
+                intent.setDataAndType(
+                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                    "image/*"
+                )
+                getBusinessRegistrationLauncher.launch(intent)
+            }else{
+                Toast.makeText(this, "갤러리 권한이 거부 되었습니다.", Toast.LENGTH_LONG).show()
+            }
+        }
+    private val getBusinessRegistrationLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK) {
+                val imageUri = result.data?.data
+                imageUri?.let {
+                    imageFile = File(getRealPathFromUri(it))
+                }
+                if (imageFile != null)
+                    binding.tvBusinessRegistration.text = "첨부됨"
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -145,8 +171,6 @@ class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface{
     @SuppressLint("NotifyDataSetChanged")
     private fun setUpPriceRv(){
         priceList = mutableListOf()
-        priceList.add(Price("주말", "디너", 50000))
-        priceList.add(Price("평일", "디너", 34000))
         priceAdapter = PriceAdapter(priceList, onClickRemoveBtn = { removePrice(it)})
 
         binding.rvPrice.apply {
@@ -209,6 +233,29 @@ class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface{
     override fun onOkBtnClicked(selected: MutableList<DialogFacility>) {
         selectedFacilities = selected
         setUpFacilityRv()
+    }
+
+    private fun getRealPathFromUri(uri: Uri): String{
+        val buildName = Build.MANUFACTURER
+        if (buildName.equals("Xiaomi")) return uri.path!!
+
+        var columnIndex = 0
+        val proj = arrayOf(MediaStore.Images.Media.DATA)
+        val cursor = contentResolver.query(uri, proj, null, null, null)
+
+        if (cursor!!.moveToFirst()){
+            columnIndex = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+        }
+        val result = cursor.getString(columnIndex)
+        cursor.close()
+        return result
+    }
+
+    fun openGallery(view: View){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+            galleryPermissionLauncher.launch(Manifest.permission.READ_MEDIA_IMAGES)
+        else
+            galleryPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
     }
 
 }

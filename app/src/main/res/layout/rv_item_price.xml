@@ -41,11 +41,12 @@
             android:layout_width="0dp"
             android:layout_height="36dp"
             android:layout_weight="4"
-            android:text="@{String.valueOf(price.price)}"
+            android:text='@{String.valueOf(price.price) + "원"}'
             android:layout_marginEnd="10dp"
             android:background="@drawable/btn_login"
             android:textAppearance="@style/btn_login_text_style"
-            android:gravity="center"/>
+            android:gravity="center"
+            />
 
         <ImageButton
             android:id="@+id/btnRemove"

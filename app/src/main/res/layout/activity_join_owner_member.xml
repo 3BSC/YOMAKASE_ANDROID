@@ -63,9 +63,6 @@
         </LinearLayout>
 
         <!-- 입력란 -->
-
-
-        <!-- 회원가입 버튼 -->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -607,19 +604,21 @@
                                 android:layout_weight="6"
                                 android:background="@drawable/et_login"
                                 android:elevation="5dp"
-                                android:gravity="center_vertical"
+                                android:gravity="center"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
                                 android:text="첨부 안 됨"
                                 android:textAppearance="@style/join_text" />
 
                             <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnGallery"
                                 android:layout_width="0dp"
                                 android:layout_height="36dp"
                                 android:layout_weight="4"
                                 android:background="@drawable/btn_login"
                                 android:text="갤러리"
-                                android:textAppearance="@style/join_small_btn_text" />
+                                android:textAppearance="@style/join_small_btn_text"
+                                android:onClick="openGallery"/>
 
                         </LinearLayout>
                     </LinearLayout>
@@ -775,6 +774,7 @@
                         android:id="@+id/rvPrice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:minHeight="30dp"
                         android:layout_marginStart="6dp"
                         android:layout_marginEnd="6dp"
                         android:layout_marginBottom="10dp"
@@ -1104,6 +1104,7 @@
             </LinearLayout>
         </ScrollView>
 
+        <!-- 회원가입 버튼 -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnJoin"
             android:layout_width="278dp"
