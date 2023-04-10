@@ -1,11 +1,12 @@
-package com.example.yomakase
+package com.example.yomakase.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.yomakase.model.Price
 import com.example.yomakase.databinding.RvItemPriceBinding
 
-class PriceAdapter(private val priceList:List<Price>, val onClickRemoveBtn: (price: Price ) -> Unit): RecyclerView.Adapter<PriceAdapter.ViewHolder>() {
+class PriceAdapter(private val priceList:List<Price>, val onClickRemoveBtn: (price: Price) -> Unit): RecyclerView.Adapter<PriceAdapter.ViewHolder>() {
 
     inner class ViewHolder(val binding: RvItemPriceBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(item: Price){

@@ -1,4 +1,4 @@
-package com.example.yomakase
+package com.example.yomakase.model
 
 data class DialogFacility(
     val img : Int,

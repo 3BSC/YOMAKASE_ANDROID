@@ -4,7 +4,7 @@
     <data>
         <variable
             name="closeday"
-            type="com.example.yomakase.ClosedDay" />
+            type="com.example.yomakase.model.ClosedDay" />
     </data>
 
     <LinearLayout

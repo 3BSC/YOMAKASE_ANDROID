@@ -1,8 +1,9 @@
-package com.example.yomakase
+package com.example.yomakase.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.yomakase.model.DialogFacility
 import com.example.yomakase.databinding.RvItemDlgFacilityBinding
 
 class DlgFacilityAdapter(private val itemList: List<DialogFacility>
