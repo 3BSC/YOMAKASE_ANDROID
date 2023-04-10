@@ -28,9 +28,9 @@ import com.example.yomakase.*
 import com.example.yomakase.adapter.ClosedDayAdapter
 import com.example.yomakase.adapter.FacilityAdapter
 import com.example.yomakase.adapter.PriceAdapter
-import com.example.yomakase.model.ClosedDay
-import com.example.yomakase.model.DialogFacility
-import com.example.yomakase.model.Price
+import com.example.yomakase.model.rv_item.ClosedDay
+import com.example.yomakase.model.rv_item.DialogFacility
+import com.example.yomakase.model.rv_item.Price
 
 class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface {
 
