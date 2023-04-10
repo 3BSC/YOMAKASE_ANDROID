@@ -4,7 +4,7 @@
     <data>
         <variable
             name="facility"
-            type="com.example.yomakase.DialogFacility" />
+            type="com.example.yomakase.model.rv_item.DialogFacility" />
     </data>
 
     <LinearLayout

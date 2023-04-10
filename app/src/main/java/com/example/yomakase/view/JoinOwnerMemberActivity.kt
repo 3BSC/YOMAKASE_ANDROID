@@ -1,10 +1,9 @@
-package com.example.yomakase
+package com.example.yomakase.view
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -17,8 +16,6 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.yomakase.databinding.ActivityJoinOwnerMemberBinding
@@ -27,8 +24,15 @@ import java.text.SimpleDateFormat
 import java.util.*
 import android.Manifest
 import android.widget.Toast
+import com.example.yomakase.*
+import com.example.yomakase.adapter.ClosedDayAdapter
+import com.example.yomakase.adapter.FacilityAdapter
+import com.example.yomakase.adapter.PriceAdapter
+import com.example.yomakase.model.rv_item.ClosedDay
+import com.example.yomakase.model.rv_item.DialogFacility
+import com.example.yomakase.model.rv_item.Price
 
-class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface{
+class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface {
 
     lateinit var binding: ActivityJoinOwnerMemberBinding
     private val dateFormat = SimpleDateFormat("yyyy-MM-dd")
@@ -181,8 +185,10 @@ class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface{
 
     private fun setUpClosedDayRv(){
         closedDays = mutableListOf()
-        var closedDayList = mutableListOf(ClosedDay("일요일"), ClosedDay("월요일"),ClosedDay("화요일"),ClosedDay("수요일"),
-            ClosedDay("목요일"),ClosedDay("금요일"),ClosedDay("토요일"),ClosedDay("공휴일"))
+        var closedDayList = mutableListOf(
+            ClosedDay("일요일"), ClosedDay("월요일"), ClosedDay("화요일"), ClosedDay("수요일"),
+            ClosedDay("목요일"), ClosedDay("금요일"), ClosedDay("토요일"), ClosedDay("공휴일")
+        )
         var closedDayAdapter = ClosedDayAdapter(closedDayList, onClickItemListener = {it, position ->
             if(it.tag == "0"){
                 it.setBackgroundResource(R.drawable.btn_login)

@@ -5,7 +5,7 @@
     <data>
         <variable
             name="price"
-            type="com.example.yomakase.Price" />
+            type="com.example.yomakase.model.rv_item.Price" />
     </data>
 
     <LinearLayout

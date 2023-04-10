@@ -1,22 +1,17 @@
-package com.example.yomakase
+package com.example.yomakase.view
 
-import android.app.AlertDialog
 import android.app.DatePickerDialog
-import android.content.res.Resources.Theme
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.InputType
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import com.example.yomakase.R
 import com.example.yomakase.databinding.ActivityJoinGeneralMemberBinding
-import com.google.android.material.materialswitch.MaterialSwitch
-import java.text.DateFormatSymbols
 import java.text.SimpleDateFormat
 import java.util.*
 

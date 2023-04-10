@@ -1,12 +1,13 @@
-package com.example.yomakase
+package com.example.yomakase.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.yomakase.model.rv_item.ClosedDay
 import com.example.yomakase.databinding.RvItemClosedDayBinding
 
-class ClosedDayAdapter(private val closedDayList:List<ClosedDay>,val onClickItemListener: (closedDay: View, position: Int) -> Unit)
+class ClosedDayAdapter(private val closedDayList:List<ClosedDay>, val onClickItemListener: (closedDay: View, position: Int) -> Unit)
     : RecyclerView.Adapter<ClosedDayAdapter.ViewHolder>()
 {
 

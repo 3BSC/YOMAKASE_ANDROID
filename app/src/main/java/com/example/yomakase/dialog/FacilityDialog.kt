@@ -1,9 +1,7 @@
 package com.example.yomakase
 
-import android.app.Dialog
 import android.content.Context
 import android.graphics.Point
-import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +9,9 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.yomakase.adapter.DlgFacilityAdapter
 import com.example.yomakase.databinding.DlgFacilitiesBinding
+import com.example.yomakase.model.rv_item.DialogFacility
 
 class FacilityDialog(facilityDialogInterface: FacilityDialogInterface, context: Context,  var preSelected: List<DialogFacility>): DialogFragment(){
     private var _binding: DlgFacilitiesBinding? = null
