@@ -5,6 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="activity"
+            type="com.example.yomakase.view.JoinOptionActivity" />
 
     </data>
 
@@ -21,7 +24,8 @@
             android:layout_marginTop="17dp"
             android:layout_marginStart="14dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="@{() -> activity.onBackPressed()}"/>
 
         <LinearLayout
             android:id="@+id/linearLayout2"
@@ -128,11 +132,12 @@
                 </LinearLayout>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnBasicUser"
+                    android:id="@+id/btnGeneralMember"
                     android:layout_width="270dp"
                     android:layout_height="104dp"
                     android:layout_margin="7dp"
                     android:background="@drawable/et_login"
+                    android:onClick="@{() -> activity.selectGeneralMember()}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
@@ -192,10 +197,11 @@
                 </LinearLayout>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnOwnerUser"
+                    android:id="@+id/btnOwnerMember"
                     android:layout_width="270dp"
                     android:layout_height="104dp"
                     android:background="@drawable/et_login"
+                    android:onClick="@{() -> activity.selectOwnerMember()}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
