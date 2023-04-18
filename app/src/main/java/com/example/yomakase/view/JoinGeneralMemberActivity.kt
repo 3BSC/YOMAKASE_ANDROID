@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.yomakase.R
 import com.example.yomakase.databinding.ActivityJoinGeneralMemberBinding
@@ -19,12 +20,42 @@ class JoinGeneralMemberActivity : AppCompatActivity() {
     lateinit var binding: ActivityJoinGeneralMemberBinding
     private val dateFormat = SimpleDateFormat("yyyy-MM-dd")
     private var pwVisible = false
+
+    private val emailRegex = Regex("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
+    private val passwordRegex = Regex("^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$")
+
+    private var email: String? = null
+    private var nickname: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_join_general_member)
         setupSpinnerEmailDomain()
         setupSpinnerHandler()
         setTodayDate()
+    }
+
+    fun emailDupCheck(view: View){
+        var id = binding.etEmail.text.toString()
+        val domain = binding.spEmailDomain.selectedItem.toString()
+        if (domain != "직접입력")
+            id += domain
+
+        if(!id.matches(emailRegex))
+            Toast.makeText(this, "이메일 형식에 맞지 않습니다.", Toast.LENGTH_SHORT).show()
+        else{
+            //dup check api call
+        }
+
+
+    }
+
+    fun nicknameDupCheck(){
+
+    }
+
+    fun reqJoinGeneralMember(){
+
     }
 
     private fun setupSpinnerEmailDomain() {

@@ -107,7 +107,6 @@
                     android:inputType="textEmailAddress"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:text="ghddbwns9808"
                     android:textAppearance="@style/join_text"/>
 
             </LinearLayout>
@@ -145,6 +144,7 @@
                         android:text="중복검사"
                         android:textColor="@color/white"
                         android:textSize="11sp"
+                        android:onClick="emailDupCheck"
 
                         android:layout_marginEnd="6dp"
                         android:layout_marginStart="4dp"
