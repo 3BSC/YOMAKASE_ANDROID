@@ -18,4 +18,10 @@ class SharedPrefs(context: Context) {
         set(value) {
             prefs.edit().putString("accessToken", value!!).apply()
         }
+
+    var refreshToken: String?
+        get() = prefs.getString("refreshToken", null)
+        set(value) {
+            prefs.edit().putString("refreshToken", value!!).apply()
+        }
 }

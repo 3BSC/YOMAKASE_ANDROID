@@ -50,7 +50,6 @@ class LoginActivity : AppCompatActivity() {
             if it.accessToken == 네트워크 에러
                 Toast(로그인에 실패했습니다(네트워크 에러))
             if 정상{
-                sharedpref에 reftoken, accesstoken 저장
                 if auto
                     App.prefs.autoLogin = true
                 else

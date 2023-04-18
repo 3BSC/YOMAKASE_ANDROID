@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.yomakase.App
 import com.example.yomakase.model.retrofit.issue_token.IssueNewAccessTokenReq
 import com.example.yomakase.model.retrofit.login.LoginReq
 import com.example.yomakase.model.retrofit.login.LoginResult
@@ -25,12 +26,21 @@ class LoginViewModel: ViewModel(){
     val result : LiveData<LoginResult>
         get() = _result
 
+    private val _token = MutableLiveData<String>()
+    val token : LiveData<String>
+        get() = _token
+
     fun reqLogin(loginReq: LoginReq) = viewModelScope.launch(exceptionHandler) {
         _result.value = repository.reqLogin(loginReq)
     }
 
     fun issueNewToken(issueNewAccessTokenReq: IssueNewAccessTokenReq) = viewModelScope.launch(exceptionHandler) {
         val issueNewTokenResult = repository.issueNewToken(issueNewAccessTokenReq)
+        _token.value = issueNewTokenResult.newAccessToken
+        saveRefreshToken(issueNewAccessTokenReq.refreshToken)
+    }
 
+    private fun saveRefreshToken(refreshToken: String){
+        App.prefs.refreshToken = refreshToken
     }
 }
