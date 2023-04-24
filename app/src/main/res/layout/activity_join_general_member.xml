@@ -428,7 +428,7 @@
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/etPhonNumber"
+                        android:id="@+id/etPhoneNumber"
                         android:layout_width="match_parent"
                         android:layout_height="36dp"
                         android:layout_marginStart="6dp"
@@ -452,6 +452,7 @@
         <!-- 최 하단 카피라이트 -->
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignUp"
             android:layout_width="278dp"
             android:layout_height="38dp"
             android:layout_marginBottom="22dp"
@@ -462,6 +463,8 @@
             android:text="회원가입"
             android:textAppearance="@style/btn_login_text_style"
             android:textSize="14sp"
+            android:onClick="reqJoinGeneralMember"
+
             app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
