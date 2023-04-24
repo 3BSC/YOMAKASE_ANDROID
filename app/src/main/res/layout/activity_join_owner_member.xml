@@ -443,7 +443,7 @@
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/etPhonNumber"
+                        android:id="@+id/etPhoneNumber"
                         android:layout_width="match_parent"
                         android:layout_height="36dp"
                         android:layout_marginStart="6dp"
@@ -546,6 +546,7 @@
                         android:background="@drawable/et_login"
                         android:elevation="5dp"
                         android:inputType="phone"
+                        android:hint="02xxxxxxx"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
                         android:textAppearance="@style/join_text" />
@@ -723,7 +724,8 @@
                             android:maxLines="1"
                             android:paddingStart="10dp"
                             android:paddingEnd="5dp"
-                            android:textAppearance="@style/join_text" />
+                            android:textAppearance="@style/join_text"
+                            />
 
                         <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/btnSearchAddress"
@@ -735,7 +737,8 @@
                             android:background="@drawable/btn_login"
                             android:elevation="5dp"
                             android:text="검색"
-                            android:textAppearance="@style/join_small_btn_text" />
+                            android:textAppearance="@style/join_small_btn_text"
+                            android:onClick="addressFind"/>
                     </LinearLayout>
 
                     <EditText
