@@ -29,6 +29,7 @@ import com.example.yomakase.*
 import com.example.yomakase.adapter.ClosedDayAdapter
 import com.example.yomakase.adapter.FacilityAdapter
 import com.example.yomakase.adapter.PriceAdapter
+import com.example.yomakase.model.retrofit.join_owner_member.JoinOwnerMemberReq
 import com.example.yomakase.model.rv_item.ClosedDay
 import com.example.yomakase.model.rv_item.DialogFacility
 import com.example.yomakase.model.rv_item.Price
@@ -101,7 +102,17 @@ class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface {
         viewModel = ViewModelProvider(this)[JoinOwnerMemberViewModel::class.java]
         setUp()
 
-        Log.d("!!@@", "${binding.tvBirth.text}")
+        viewModel.emailResult.observe(this, androidx.lifecycle.Observer {
+            //email = it.email
+        })
+
+        viewModel.nicknameResult.observe(this, androidx.lifecycle.Observer {
+            //nickname = it.nickname
+        })
+
+        viewModel.joinGeneralMemberResult.observe(this, androidx.lifecycle.Observer {
+            //
+        })
     }
 
     private fun setUp(){
@@ -115,8 +126,6 @@ class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface {
     }
 
     fun reqJoinOwnerMember(view: View){
-        email = "1"
-        nickname = "2"
         if(isEmptyInput())
             Toast.makeText(this, "필수 입력란은 모두 입력되어야합니다.", Toast.LENGTH_SHORT).show()
 
@@ -127,8 +136,14 @@ class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface {
         else if(!passwordValidator())
         else if(!phoneValidator() || !storeTelValidator())
             Toast.makeText(this, "번호는 -를 빼고 숫자만 입력해주세요.", Toast.LENGTH_SHORT).show()
-        else
+        else {
             Toast.makeText(this, "성공", Toast.LENGTH_SHORT).show()
+            /*
+            viewModel.reqJoinGeneralMember(JoinOwnerMemberReq(
+                values
+            ))
+             */
+        }
     }
 
     private fun isEmptyInput(): Boolean{
