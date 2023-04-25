@@ -1,4 +1,6 @@
 package com.example.yomakase.viewmodel
 
-class JoinOwnerMemberViewModel {
+import androidx.lifecycle.ViewModel
+
+class JoinOwnerMemberViewModel: ViewModel() {
 }

@@ -162,7 +162,8 @@
                         android:background="@drawable/btn_login"
                         android:elevation="5dp"
                         android:text="중복검사"
-                        android:textAppearance="@style/join_small_btn_text" />
+                        android:textAppearance="@style/join_small_btn_text"
+                        android:onClick="emailValidator"/>
                 </LinearLayout>
 
                 <!-- 비밀번호 -->
@@ -257,7 +258,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="@id/etPasswordCheck" />
 
-                        <androidx.appcompat.widget.AppCompatEditText
+                        <EditText
                             android:id="@+id/etPasswordCheck"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"
@@ -343,7 +344,8 @@
                             android:background="@drawable/btn_login"
                             android:elevation="5dp"
                             android:text="중복검사"
-                            android:textAppearance="@style/join_small_btn_text" />
+                            android:textAppearance="@style/join_small_btn_text"
+                            android:onClick="nicknameValidator"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -442,7 +444,7 @@
                             android:textColor="@color/red" />
                     </LinearLayout>
 
-                    <androidx.appcompat.widget.AppCompatEditText
+                    <EditText
                         android:id="@+id/etPhoneNumber"
                         android:layout_width="match_parent"
                         android:layout_height="36dp"
@@ -1123,6 +1125,7 @@
             app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:onClick="reqJoinOwnerMember"
             />
 
         <!-- 최 하단 카피라이트 -->
