@@ -124,4 +124,16 @@
         <item name="counterOverflowTextColor">@color/theme_pink</item>
     </style>
 
+    <style name="main_category_text">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/theme_pink</item>
+        <item name="fontFamily">@font/nanumgothic_extrabold</item>
+    </style>
+
+    <style name="main_more_text">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/theme_pink</item>
+        <item name="fontFamily">@font/nanumgothic_extrabold</item>
+    </style>
+
 </resources>
