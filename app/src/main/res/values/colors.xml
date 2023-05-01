@@ -11,4 +11,5 @@
 
     <color name="theme_pink">#FF6666</color>
     <color name="et_login_pink">#FFF8F8</color>
+    <color name="cardview_ripple_color">#FDBDBD</color>
 </resources>
