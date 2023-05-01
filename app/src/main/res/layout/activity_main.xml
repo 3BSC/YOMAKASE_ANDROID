@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/etSearchStore"
                 android:layout_width="270dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="30dp"
@@ -36,14 +36,14 @@
                 android:paddingStart="15dp"
                 android:textAppearance="@style/join_text"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton"
+                app:layout_constraintEnd_toStartOf="@+id/btnSearchStore"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.733" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/btnSearchStore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -51,7 +51,7 @@
                 android:background="@drawable/search_btn_shape"
                 android:elevation="10dp"
                 android:src="@drawable/ic_small_search"
-                app:layout_constraintStart_toEndOf="@+id/editText"
+                app:layout_constraintStart_toEndOf="@+id/etSearchStore"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -59,16 +59,16 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <!-- 중단 메인 -->
-
-        <!-- 하단 필터 -->
         <ScrollView
+            android:id="@+id/middleScrollView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/bottomFilterLayout"
+            android:backgroundTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/topSearchLayout"
+            app:layout_constraintBottom_toTopOf="@id/bottomFilterLayout"
             app:layout_constraintVertical_bias="0.0">
 
             <LinearLayout
@@ -93,6 +93,7 @@
                         android:textAppearance="@style/main_category_text" />
 
                     <TextView
+                        android:id="@+id/tvAllMore"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="2"
@@ -110,8 +111,12 @@
 
                 <!-- 전체 recyclerview -->
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAll"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"/>
+
+
 
                 <!-- 스시 오마카세 text view -->
                 <LinearLayout
@@ -130,6 +135,7 @@
                         android:textAppearance="@style/main_category_text" />
 
                     <TextView
+                        android:id="@+id/tvSushiMore"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="2"
@@ -147,6 +153,7 @@
 
                 <!-- 스시 오마카세 recycler view -->
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSushi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -159,6 +166,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/tvUmakaseMore"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="14"
@@ -184,8 +192,51 @@
 
                 <!-- 우마카세 recycler view -->
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvUmakase"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp" />
+
+                <!-- 돈마카세 text view -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvDonmakaseMore"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="14"
+                        android:gravity="center_vertical"
+                        android:text="돈마카세"
+                        android:textAppearance="@style/main_category_text" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="right|center_vertical"
+                        android:text="더보기"
+                        android:textAppearance="@style/main_more_text" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_more" />
+                </LinearLayout>
+
+                <!-- 돈마카세 recycler view -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvDonmakase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp" />
+
 
                 <!-- 기타 text view -->
                 <LinearLayout
@@ -196,6 +247,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/tvOthersMore"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="14"
@@ -221,20 +273,27 @@
 
                 <!-- 기타 recycler view -->
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvOthers"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp" />
             </LinearLayout>
 
         </ScrollView>
 
+
+        <!-- 하단 필터 -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/bottomFilterLayout"
             android:layout_width="match_parent"
-            android:layout_height="90dp"
+            android:layout_height="80dp"
             android:backgroundTint="@color/white"
+            android:layout_marginTop="10dp"
+            android:elevation="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/middleScrollView">
 
             <ImageButton
                 android:layout_width="wrap_content"
