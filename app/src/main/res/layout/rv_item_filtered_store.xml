@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="store"
+            type="com.example.yomakase.model.rv_item.FilteredStoreOverView" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rvLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp"
+        app:cardElevation="8dp"
+        android:clickable="true"
+        app:rippleColor="@color/cardview_ripple_color"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivStore"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:layout_margin="10dp"/>
+            
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp">
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@{store.name}"
+                    android:textAppearance="@style/FilteredStore_rv_item_black_text"
+                    android:textSize="20sp"/>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/_ic_star"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@{String.valueOf(store.grade)}"
+                        android:textAppearance="@style/main_rv_store_overview_store_grade"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="5dp"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@{store.address}"
+                    android:textAppearance="@style/FilteredStore_rv_item_black_text"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@{store.storeTel}"
+                    android:textAppearance="@style/FilteredStore_rv_item_black_text"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@{store.category}"
+                    android:textColor="@color/theme_pink"
+                    android:textAppearance="@style/FilteredStore_rv_item_black_text"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
