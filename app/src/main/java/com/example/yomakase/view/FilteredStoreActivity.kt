@@ -1,4 +1,4 @@
-package com.example.yomakase
+package com.example.yomakase.view
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.yomakase.R
 import com.example.yomakase.adapter.FilteredStoreOverviewAdapter
 import com.example.yomakase.databinding.ActivityFilteredStoreBinding
 import com.example.yomakase.model.rv_item.FilteredStoreOverView
