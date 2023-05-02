@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dlg_bottom_filter_background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="검색 필터"
+        android:textAppearance="@style/main_dlg_filter_text_black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="날짜"
+                    android:textAppearance="@style/main_dlg_filter_text_pink"/>
+
+
+                <TextView
+                    android:id="@+id/tvFilterDay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="날짜를 선택해주세요"
+                    android:textAppearance="@style/main_category_text"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="인원수"
+                    android:textAppearance="@style/main_dlg_filter_text_pink"/>
+
+
+                <EditText
+                    android:id="@+id/etFilterPeopole"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:inputType="numberDecimal"
+                    android:hint="n"
+                    android:textAppearance="@style/main_category_text"
+                    android:textColor="@color/black"
+                    android:background="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="지역"
+                    android:textAppearance="@style/main_dlg_filter_text_pink"/>
+
+
+                <EditText
+                    android:id="@+id/etFilterRegion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="region"
+                    android:textAppearance="@style/main_category_text"
+                    android:textColor="@color/black"
+                    android:background="@color/white"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnFilterAll"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="전체"
+            android:textAppearance="@style/btn_login_text_style"
+            android:background="@drawable/btn_unclicked"
+            android:tag="1"
+            android:layout_margin="10dp"
+            android:elevation="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnFilterOmakase"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text=" 오마카세"
+            android:textAppearance="@style/btn_login_text_style"
+            android:background="@drawable/btn_unclicked"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            android:tag="오마카세"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnFilterUmakase"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="우마카세"
+            android:textAppearance="@style/btn_login_text_style"
+            android:background="@drawable/btn_unclicked"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            android:tag="우마카세"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnFilterDonmakase"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="돈마카세"
+            android:textAppearance="@style/btn_login_text_style"
+            android:background="@drawable/btn_unclicked"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            android:tag="돈마카세"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnFilterOthers"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text=" 기타"
+            android:textAppearance="@style/btn_login_text_style"
+            android:background="@drawable/btn_unclicked"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            android:tag="기타"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnFilterApply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_login"
+        android:text="조건에 맞는 결과 보기"
+        android:textAppearance="@style/btn_login_text_style"/>
+
+
+</LinearLayout>

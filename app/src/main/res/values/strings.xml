@@ -1,3 +1,40 @@
 <resources>
     <string name="app_name">Yomakase</string>
+    <string name="copyright">Copyright 3BSC. All Right Reserved</string>
+    <string name="logo_korean">요마카세</string>
+    <string name="logo_sub_korean">요즘 오마카세의 모든 것</string>
+
+    <!-- 이메일 도메인 list -->
+    <string-array name="sp_email_domain">
+        <item>"@naver.com"</item>
+        <item>"@gmail.com"</item>
+        <item>"@daum.com"</item>
+        <item>"@nate.com"</item>
+        <item>"@hotmail.com"</item>
+        <item>"직접입력"</item>
+    </string-array>
+
+    <!-- 구분 list -->
+    <string-array name="sp_category">
+        <item>"스시 오마카세"</item>
+        <item>"우마카세"</item>
+        <item>"돈마카세"</item>
+        <item>"이모카세"</item>
+        <item>"기타"</item>
+    </string-array>
+
+    <!-- 가격정보 날짜 list -->
+    <string-array name="sp_price_day">
+        <item>"평일"</item>
+        <item>"주말"</item>
+        <item>"공휴일"</item>
+        <item>"구분 없음"</item>
+    </string-array>
+
+    <!-- 가격정보 시간 list -->
+    <string-array name="sp_price_time">
+        <item>"런치"</item>
+        <item>"디너"</item>
+        <item>"구분 없음"</item>
+    </string-array>
 </resources>
