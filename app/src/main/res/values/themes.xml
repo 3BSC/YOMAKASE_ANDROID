@@ -23,7 +23,17 @@
 
     <style name="AppModalStyle"
         parent="Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@drawable/dlg_bottom_filter_background</item>
+        <item name="android:background">@drawable/dlg_bottom_background</item>
+    </style>
+
+    <style name="basic_balck">
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/nanumgothic_extrabold</item>
+    </style>
+
+    <style name="basic_pink">
+        <item name="android:textColor">@color/theme_pink</item>
+        <item name="fontFamily">@font/nanumgothic_extrabold</item>
     </style>
 
     <!-- 카피라이트 -->
@@ -143,7 +153,7 @@
     </style>
 
     <!-- StoreDetail overview name text -->
-    <style name="name">
+    <style name="store_detail_overview_name">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/black</item>
         <item name="fontFamily">@font/nanumgothic_extrabold</item>
@@ -160,6 +170,13 @@
     <style name="store_detail_overview_category">
         <item name="android:textSize">17sp</item>
         <item name="android:textColor">@color/theme_pink</item>
+        <item name="fontFamily">@font/nanumgothic_extrabold</item>
+    </style>
+
+    <!-- Reservation weekday text -->
+    <style name="reservation_weekday">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#919191</item>
         <item name="fontFamily">@font/nanumgothic_extrabold</item>
     </style>
 
