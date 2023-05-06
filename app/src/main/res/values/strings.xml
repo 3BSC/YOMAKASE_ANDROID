@@ -37,4 +37,6 @@
         <item>"디너"</item>
         <item>"구분 없음"</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
