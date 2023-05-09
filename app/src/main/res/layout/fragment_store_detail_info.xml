@@ -133,20 +133,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_margin="15dp">
+                android:layout_margin="10dp">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="가격"
                     android:textAppearance="@style/basic_pink"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="10dp"/>
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPrice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:elevation="10dp"/>
+                    android:background="@drawable/white_rv_background"
+                    android:layout_margin="5dp"
+                    android:elevation="3dp"
+                    android:padding="10dp"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -155,20 +160,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_margin="15dp">
+                android:layout_margin="10dp">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="편의시설"
                     android:textAppearance="@style/basic_pink"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="10dp"/>
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvFacilities"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:elevation="10dp"/>
+                    android:background="@drawable/white_rv_background"
+                    android:layout_margin="5dp"
+                    android:elevation="3dp"
+                    android:padding="10dp"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
