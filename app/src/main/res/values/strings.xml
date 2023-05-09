@@ -4,6 +4,19 @@
     <string name="logo_korean">요마카세</string>
     <string name="logo_sub_korean">요즘 오마카세의 모든 것</string>
 
+    <string name="Lorem">
+        <p>Lorem ipsum dolor sit amet. Non ullam ipsam sit totam numquam eum alias sint et debitis eveniet quo sint culpa est dolore tempore eos tempora laboriosam. Et maxime pariatur aut sint quia aut vero possimus! </p>
+        <p>Aut similique maxime aut ipsa corrupti qui soluta rerum non impedit delectus est architecto enim qui placeat consequatur aut obcaecati porro. Sit odio consequatur et debitis laboriosam sed consequatur incidunt qui omnis saepe et facilis facere non laboriosam numquam est maiores quaerat! A incidunt enim ut natus internos a atque eaque 33 sunt recusandae. Aut quaerat totam quo fuga fuga qui enim laboriosam a excepturi nesciunt et itaque doloribus non galisum sapiente. </p>
+        <p>Ut sint officia sit optio esse et rerum reiciendis et ipsa inventore hic accusamus minima et sint dolorem. Est fugit quae non sequi consequatur qui velit porro non exercitationem voluptatibus et dolorem libero et dolorum mollitia. Aut debitis facilis qui iusto doloremque sed galisum enim. </p>
+        <p>Lorem ipsum dolor sit amet. Non ullam ipsam sit totam numquam eum alias sint et debitis eveniet quo sint culpa est dolore tempore eos tempora laboriosam. Et maxime pariatur aut sint quia aut vero possimus! </p>
+        <p>Aut similique maxime aut ipsa corrupti qui soluta rerum non impedit delectus est architecto enim qui placeat consequatur aut obcaecati porro. Sit odio consequatur et debitis laboriosam sed consequatur incidunt qui omnis saepe et facilis facere non laboriosam numquam est maiores quaerat! A incidunt enim ut natus internos a atque eaque 33 sunt recusandae. Aut quaerat totam quo fuga fuga qui enim laboriosam a excepturi nesciunt et itaque doloribus non galisum sapiente. </p>
+        <p>Ut sint officia sit optio esse et rerum reiciendis et ipsa inventore hic accusamus minima et sint dolorem. Est fugit quae non sequi consequatur qui velit porro non exercitationem voluptatibus et dolorem libero et dolorum mollitia. Aut debitis facilis qui iusto doloremque sed galisum enim. </p>
+        <p>Lorem ipsum dolor sit amet. Non ullam ipsam sit totam numquam eum alias sint et debitis eveniet quo sint culpa est dolore tempore eos tempora laboriosam. Et maxime pariatur aut sint quia aut vero possimus! </p>
+        <p>Aut similique maxime aut ipsa corrupti qui soluta rerum non impedit delectus est architecto enim qui placeat consequatur aut obcaecati porro. Sit odio consequatur et debitis laboriosam sed consequatur incidunt qui omnis saepe et facilis facere non laboriosam numquam est maiores quaerat! A incidunt enim ut natus internos a atque eaque 33 sunt recusandae. Aut quaerat totam quo fuga fuga qui enim laboriosam a excepturi nesciunt et itaque doloribus non galisum sapiente. </p>
+        <p>Ut sint officia sit optio esse et rerum reiciendis et ipsa inventore hic accusamus minima et sint dolorem. Est fugit quae non sequi consequatur qui velit porro non exercitationem voluptatibus et dolorem libero et dolorum mollitia. Aut debitis facilis qui iusto doloremque sed galisum enim. </p>
+
+    </string>
+
     <!-- 이메일 도메인 list -->
     <string-array name="sp_email_domain">
         <item>"@naver.com"</item>

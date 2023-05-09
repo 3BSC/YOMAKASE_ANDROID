@@ -20,8 +20,9 @@
             android:layout_height="wrap_content"
             android:text="예약하기"
             android:textAppearance="@style/basic_balck"
-            android:textSize="20sp"
-            android:layout_margin="10dp"/>
+            android:textSize="21sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -37,7 +38,6 @@
                 
                 app:mcv_headerTextAppearance="@style/store_detail_overview_name"
                 app:mcv_weekDayTextAppearance="@style/reservation_weekday"
-                app:mcv_dateTextAppearance="@style/store_detail_overview_address"
                 android:padding="10dp"
 
                 app:mcv_selectionColor="@color/theme_pink"

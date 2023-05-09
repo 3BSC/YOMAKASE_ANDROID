@@ -10,7 +10,7 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".StoreDetailActivity"
+        tools:context=".view.StoreDetailActivity"
         android:background="@color/white">
 
         <com.google.android.material.appbar.AppBarLayout
@@ -36,7 +36,7 @@
                 <com.google.android.material.appbar.MaterialToolbar
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="90dp"
                     app:layout_collapseMode="pin"/>
             </com.google.android.material.appbar.CollapsingToolbarLayout>
         </com.google.android.material.appbar.AppBarLayout>
@@ -45,14 +45,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            app:layout_anchor="@id/linearLayout"
+            app:layout_anchor="@id/bottomView"
             app:layout_anchorGravity="top|center_horizontal"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="300dp"
-                android:layout_height="150dp"
+                android:layout_height="130dp"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="3dp"
@@ -67,7 +67,6 @@
                     android:layout_height="match_parent">
 
                     <LinearLayout
-                        android:id="@+id/linearLayout3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -79,14 +78,14 @@
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="10dp"
                             android:text="가게이름"
-                            android:textAppearance="@style/FilteredStore_rv_item_black_text" />
+                            android:textAppearance="@style/store_detail_overview_name" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="10dp"
                             android:text="주소"
                             android:textAppearance="@style/store_detail_overview_address" />
 
@@ -129,26 +128,41 @@
                 android:layout_margin="5dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/bottomView"
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical"
-            android:paddingTop="100dp"
-            android:paddingBottom="50dp"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:paddingTop="90dp"
+            android:paddingBottom="40dp">
 
-            <TableLayout
-                android:id="@+id/tab"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/custom_tab"
+                    app:tabGravity="start"
+                    app:tabIndicatorColor="@color/theme_pink"
+                    app:tabTextColor="@color/black"
+                    app:tabSelectedTextColor="@color/theme_pink"
+                    android:layout_marginStart="15dp"/>
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
-        </LinearLayout>
 
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:nestedScrollingEnabled="false"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/btnReservate"
@@ -159,7 +173,7 @@
             android:backgroundTint="@color/theme_pink"
             android:elevation="5dp"
             android:layout_margin="10dp"
-            app:layout_anchor="@id/linearLayout"
+            app:layout_anchor="@id/bottomView"
             app:layout_anchorGravity="bottom|end"
             />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
