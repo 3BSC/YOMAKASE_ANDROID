@@ -170,7 +170,7 @@
     <style name="store_detail_overview_category">
         <item name="android:textSize">17sp</item>
         <item name="android:textColor">@color/theme_pink</item>
-        <item name="fontFamily">@font/nanumgothic_extrabold</item>
+        <item name="fontFamily">@font/nanumgothic</item>
     </style>
 
     <!-- Reservation weekday text -->
