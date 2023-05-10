@@ -23,7 +23,17 @@
 
     <style name="AppModalStyle"
         parent="Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@drawable/dlg_bottom_filter_background</item>
+        <item name="android:background">@drawable/dlg_bottom_background</item>
+    </style>
+
+    <style name="basic_balck">
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/nanumgothic_extrabold</item>
+    </style>
+
+    <style name="basic_pink">
+        <item name="android:textColor">@color/theme_pink</item>
+        <item name="fontFamily">@font/nanumgothic_extrabold</item>
     </style>
 
     <!-- 카피라이트 -->
@@ -139,6 +149,65 @@
     <style name="FilteredStore_rv_item_black_text">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/nanumgothic_extrabold</item>
+    </style>
+
+    <!-- StoreDetail overview name text -->
+    <style name="store_detail_overview_name">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/nanumgothic_extrabold</item>
+    </style>
+
+    <!-- StoreDetail overview address text -->
+    <style name="store_detail_overview_address">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#5F5F5F</item>
+        <item name="fontFamily">@font/nanumgothic</item>
+    </style>
+
+    <!-- StoreDetail overview category text -->
+    <style name="store_detail_overview_category">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/theme_pink</item>
+        <item name="fontFamily">@font/nanumgothic</item>
+    </style>
+
+    <!-- Reservation weekday text -->
+    <style name="reservation_weekday">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#919191</item>
+        <item name="fontFamily">@font/nanumgothic_extrabold</item>
+    </style>
+
+    <style name="tab_text">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#706969</item>
+        <item name="fontFamily">@font/nanumgothic</item>
+    </style>
+
+    <style name="selected_tab_text">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/nanumgothic</item>
+    </style>
+
+    <style name="custom_tab">
+        <item name="tabTextAppearance">@style/tab_text</item>
+        <item name="tabSelectedTextAppearance">@style/selected_tab_text</item>
+        <item name="tabIndicatorColor">@color/theme_pink</item>
+    </style>
+
+    <style name="store_detail_explain">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#515151</item>
+        <item name="fontFamily">@font/nanumgothic_extrabold</item>
+    </style>
+
+    <!-- StoreDetail Fragment Info address -->
+    <style name="store_detail_fragment_info_address">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#515151</item>
         <item name="fontFamily">@font/nanumgothic_extrabold</item>
     </style>
 

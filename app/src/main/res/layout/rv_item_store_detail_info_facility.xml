@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="facility"
+            type="com.example.yomakase.model.rv_item.StoreDetailFacility" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_margin="10dp">
+        
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFacility"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"/>
+        
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{facility.name}"
+            android:textAppearance="@style/basic_balck"
+            android:textSize="17sp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
