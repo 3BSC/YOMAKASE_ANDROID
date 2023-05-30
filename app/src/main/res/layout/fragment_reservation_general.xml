@@ -12,6 +12,12 @@
         android:layout_height="match_parent"
         tools:context=".view.ReservationGeneralFragment">
 
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/middleScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white">
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -33,7 +39,7 @@
                 android:text="다가오는 예약"
                 android:textAppearance="@style/basic_balck"
                 android:textSize="20sp"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginBottom="10dp"/>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -49,7 +55,7 @@
                 android:textAppearance="@style/basic_balck"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginBottom="10dp"/>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -59,6 +65,6 @@
                 android:layout_margin="10dp"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
-
+        </androidx.core.widget.NestedScrollView>
     </FrameLayout>
 </layout>

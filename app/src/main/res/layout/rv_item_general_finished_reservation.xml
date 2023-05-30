@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="reservation"
+            type="com.example.yomakase.model.rv_item.GeneralReservation" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -40,7 +42,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
-                    android:text="1111 번"
+                    android:text='@{reservation.reservationNumber+"번"}'
                     android:textAppearance="@style/rv_item_general_reservation_text"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -63,7 +65,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
-                    android:text="병천 순대"
+                    android:text="@{reservation.reservationStore}"
                     android:textAppearance="@style/rv_item_general_reservation_text"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -86,7 +88,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
-                    android:text="2023년 5월 30일 17:00"
+                    android:text="@{reservation.reservationDate}"
                     android:textAppearance="@style/rv_item_general_reservation_text"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -109,7 +111,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
-                    android:text="2 명"
+                    android:text='@{reservation.people+"명"}'
                     android:textAppearance="@style/rv_item_general_reservation_text"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
