@@ -17,12 +17,7 @@
         android:theme="@style/Theme.Yomakase"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity
-            android:name=".view.StoreDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.FilteredStoreActivity"
-            android:exported="false" />
+
         <activity
             android:name=".KakaoAddressFindActivity"
             android:exported="false" />
