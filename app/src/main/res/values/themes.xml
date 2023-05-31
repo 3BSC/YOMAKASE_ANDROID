@@ -36,6 +36,16 @@
         <item name="fontFamily">@font/nanumgothic_extrabold</item>
     </style>
 
+    <style name="basic_balck_bold">
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/nanumgothic_bold</item>
+    </style>
+
+    <style name="basic_pink_bold">
+        <item name="android:textColor">@color/theme_pink</item>
+        <item name="fontFamily">@font/nanumgothic_bold</item>
+    </style>
+
     <!-- 카피라이트 -->
     <style name="copyright">
         <item name="android:textSize">11sp</item>
