@@ -1,4 +1,4 @@
-package com.example.yomakase.view
+package com.example.yomakase.view.owner
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,13 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.yomakase.R
 
-
-class GeneralEditProfileFragment : Fragment() {
+class OwnerManageLineupFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_general_edit_profile, container, false)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_owner_manage_lineup, container, false)
     }
-
-
 }

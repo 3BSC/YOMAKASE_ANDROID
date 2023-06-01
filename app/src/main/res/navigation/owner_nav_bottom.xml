@@ -6,12 +6,12 @@
     app:startDestination="@id/ownerAllStore">
     <fragment
         android:id="@+id/ownerAllStore"
-        android:name="com.example.yomakase.view.Owner.OwnerAllStoreFragment"
+        android:name="com.example.yomakase.view.owner.OwnerAllStoreFragment"
         android:label="fragment_owner_all_store"
         tools:layout="@layout/fragment_owner_all_store" />
     <fragment
         android:id="@+id/ownerProfile"
-        android:name="com.example.yomakase.view.Owner.OwnerProfileFragment"
+        android:name="com.example.yomakase.view.owner.OwnerProfileFragment"
         android:label="fragment_owner_profile"
         tools:layout="@layout/fragment_owner_profile" />
 </navigation>

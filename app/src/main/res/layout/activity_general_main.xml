@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.MainActivity"
+        tools:context=".view.general.GeneralMainActivity"
         android:orientation="vertical">
 
         <androidx.fragment.app.FragmentContainerView
@@ -19,14 +19,14 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:name="androidx.navigation.fragment.NavHostFragment"
-            app:navGraph="@navigation/nav_bottom"
+            app:navGraph="@navigation/general_nav_bottom"
             app:defaultNavHost="true"/>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_nav_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:menu="@menu/bottom_nav_menu"
+            app:menu="@menu/general_bottom_nav_menu"
             app:itemIconTint="@drawable/bottom_nav_icon_color"
             app:labelVisibilityMode="unlabeled"/>
 

@@ -1,4 +1,4 @@
-package com.example.yomakase.view
+package com.example.yomakase.view.general
 
 import android.content.Context
 import android.os.Bundle
@@ -7,23 +7,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.yomakase.R
 import com.example.yomakase.adapter.GeneralFinishedReservationAdapter
 import com.example.yomakase.adapter.GeneralUpcommingReservationAdapter
-import com.example.yomakase.databinding.FragmentReservationGeneralBinding
+import com.example.yomakase.databinding.FragmentGeneralReservationBinding
 import com.example.yomakase.model.rv_item.GeneralReservation
-import com.example.yomakase.model.rv_item.MainStoreOverView
 
 
-class ReservationGeneralFragment : Fragment() {
+class GeneralReservationFragment : Fragment() {
 
-    private lateinit var binding: FragmentReservationGeneralBinding
+    private lateinit var binding: FragmentGeneralReservationBinding
     private lateinit var activityContext : Context
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         activityContext = requireContext()
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_reservation_general, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_general_reservation, container, false)
 
         setUpUpcommingReservationRv()
         setUpFinishedReservationRv()

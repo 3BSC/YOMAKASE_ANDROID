@@ -10,7 +10,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".view.storedetail.StoreDetailExplainFragment">
+        tools:context=".view.general.storedetail.StoreDetailExplainFragment">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvStoreExplain"

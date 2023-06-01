@@ -7,16 +7,16 @@
 
     <fragment
         android:id="@+id/restaurant"
-        android:name="com.example.yomakase.view.AllStoreFragment"
+        android:name="com.example.yomakase.view.general.GeneralAllStoreFragment"
         android:label="AllStoreFragment" />
     <fragment
         android:id="@+id/reservation"
-        android:name="com.example.yomakase.view.ReservationGeneralFragment"
+        android:name="com.example.yomakase.view.general.GeneralReservationFragment"
         android:label="fragment_reservation_general"
-        tools:layout="@layout/fragment_reservation_general" />
+        tools:layout="@layout/fragment_general_reservation" />
     <fragment
         android:id="@+id/profile"
-        android:name="com.example.yomakase.view.ProfileGeneralFragment"
+        android:name="com.example.yomakase.view.general.GeneralProfileFragment"
         android:label="fragment_profile_general"
-        tools:layout="@layout/fragment_profile_general" />
+        tools:layout="@layout/fragment_general_profile" />
 </navigation>

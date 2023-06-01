@@ -1,4 +1,4 @@
-package com.example.yomakase.view
+package com.example.yomakase.view.general
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
@@ -16,14 +16,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.yomakase.R
 import com.example.yomakase.adapter.MainStoreOverviewAdapter
-import com.example.yomakase.databinding.FragmentAllStoreBinding
+import com.example.yomakase.databinding.FragmentGeneralAllStoreBinding
 import com.example.yomakase.model.rv_item.MainStoreOverView
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.text.SimpleDateFormat
 import java.util.*
 
-class AllStoreFragment : Fragment() {
-    private lateinit var binding: FragmentAllStoreBinding
+class GeneralAllStoreFragment : Fragment() {
+    private lateinit var binding: FragmentGeneralAllStoreBinding
 
     private lateinit var activityContext : Context
 
@@ -41,7 +41,7 @@ class AllStoreFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         activityContext = requireContext()
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_all_store, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_general_all_store, container, false)
         setUpRv()
 
         binding.btnFilter.setOnClickListener {

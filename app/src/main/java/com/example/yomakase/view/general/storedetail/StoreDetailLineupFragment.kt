@@ -1,4 +1,4 @@
-package com.example.yomakase.view.storedetail
+package com.example.yomakase.view.general.storedetail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

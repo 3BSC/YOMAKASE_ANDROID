@@ -10,12 +10,12 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.AllStoreFragment">
+        tools:context=".view.general.GeneralAllStoreFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".view.MainActivity"
+
             android:orientation="vertical">
 
             <!--상단 검색 view-->

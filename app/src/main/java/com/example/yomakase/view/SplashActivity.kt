@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.example.yomakase.R
+import com.example.yomakase.view.general.GeneralMainActivity
+import com.example.yomakase.view.owner.OwnerMainActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +15,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, GeneralMainActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000)
