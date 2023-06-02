@@ -9,9 +9,20 @@
         android:name="com.example.yomakase.view.owner.OwnerAllStoreFragment"
         android:label="fragment_owner_all_store"
         tools:layout="@layout/fragment_owner_all_store" />
+
     <fragment
         android:id="@+id/ownerProfile"
         android:name="com.example.yomakase.view.owner.OwnerProfileFragment"
         android:label="fragment_owner_profile"
-        tools:layout="@layout/fragment_owner_profile" />
+        tools:layout="@layout/fragment_owner_profile" >
+        <action
+            android:id="@+id/action_ownerProfile_to_ownerEditProfileFragment"
+            app:destination="@id/ownerEditProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/ownerEditProfile"
+        android:name="com.example.yomakase.OwnerEditProfileFragment"
+        android:label="OwnerEditProfileFragment"
+        tools:layout="@layout/fragment_owner_edit_profile"/>
+
 </navigation>
