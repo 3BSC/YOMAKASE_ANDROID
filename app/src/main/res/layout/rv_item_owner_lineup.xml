@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white">
+    
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMenu"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="메뉴 1"
+        android:layout_margin="10dp"
+        android:background="@drawable/et_login"
+        android:textAppearance="@style/basic_balck_bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:elevation="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnMoveItem"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_login"
+        android:src="@drawable/_ic_list_white"
+        android:layout_marginTop="10dp"/>
+    
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_login"
+        android:src="@drawable/ic_trash"
+        android:layout_margin="10dp"/>
+    
+
+    
+    
+</androidx.appcompat.widget.LinearLayoutCompat>
+

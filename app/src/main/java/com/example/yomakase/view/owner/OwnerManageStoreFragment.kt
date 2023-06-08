@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
 import com.example.yomakase.R
 import com.example.yomakase.databinding.FragmentOwnerManageStoreBinding
@@ -21,6 +22,10 @@ class OwnerManageStoreFragment : Fragment() {
 
         Glide.with(binding.root).load(testUrl).centerInside().into(binding.storeOverview.ivStore)
         binding.storeOverview.store = OwnerStoreOverview(testUrl, "가게이름 2")
+
+        binding.btnEditLineup.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_ownerManageStoreFragment_to_ownerManageLineupFragment)
+        }
         return binding.root
     }
 }

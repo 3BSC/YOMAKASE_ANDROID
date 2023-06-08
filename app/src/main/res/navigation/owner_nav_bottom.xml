@@ -32,6 +32,15 @@
         android:id="@+id/ownerManageStoreFragment"
         android:name="com.example.yomakase.view.owner.OwnerManageStoreFragment"
         android:label="OwnerManageStoreFragment"
-        tools:layout="@layout/fragment_owner_manage_store"/>
+        tools:layout="@layout/fragment_owner_manage_store">
+        <action
+            android:id="@+id/action_ownerManageStoreFragment_to_ownerManageLineupFragment"
+            app:destination="@id/ownerManageLineupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ownerManageLineupFragment"
+        android:name="com.example.yomakase.view.owner.OwnerManageLineupFragment"
+        android:label="OwnerManageLineupFragment"
+        tools:layout="@layout/fragment_owner_manage_lineup"/>
 
 </navigation>

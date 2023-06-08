@@ -41,12 +41,49 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvLineUp"
                 android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/addMenu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvStoreName" />
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/addMenu"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
                 app:layout_constraintBottom_toTopOf="@+id/btnOk"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvStoreName"
-                app:layout_constraintVertical_bias="0.057" />
+                app:layout_constraintTop_toBottomOf="@id/rvLineUp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/et_login"
+                    android:layout_margin="10dp"
+                    android:elevation="5dp"
+                    android:paddingStart="5dp"
+                    android:hint="메뉴를 입력해주세요"
+                    android:textAppearance="@style/basic_balck_bold"
+                    android:textSize="17sp"/>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btnAddMenu"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btn_login"
+                    android:src="@drawable/ic_add_white"
+                    android:layout_margin="10dp"
+                    android:elevation="5dp"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnOk"
@@ -54,13 +91,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/btn_login"
                 android:text="완료"
                 android:textAppearance="@style/btn_login_text_style"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

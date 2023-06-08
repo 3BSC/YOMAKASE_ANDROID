@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import androidx.viewpager2.widget.ViewPager2
 import com.example.yomakase.R
 import com.example.yomakase.adapter.OwnerAllStoreAdapter
@@ -40,6 +41,11 @@ class OwnerAllStoreFragment : Fragment() {
 
         binding.indicator.setViewPager(binding.vpStore)
         binding.vpStore.adapter!!.registerAdapterDataObserver(binding.indicator.adapterDataObserver)
+
+        binding.appCompatButton.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_ownerAllStore_to_ownerManageStoreFragment)
+        }
+
         return binding.root
     }
 }
