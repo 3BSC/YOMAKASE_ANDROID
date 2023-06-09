@@ -31,12 +31,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
                 android:text="가게 이름"
                 android:textAppearance="@style/basic_balck"
                 android:textSize="40sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rvLineUp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvLineUp"

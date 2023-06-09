@@ -26,6 +26,9 @@ class OwnerManageStoreFragment : Fragment() {
         binding.btnEditLineup.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.action_ownerManageStoreFragment_to_ownerManageLineupFragment)
         }
+        binding.btnManageReservation.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_ownerManageStoreFragment_to_ownerManageReservationFragment)
+        }
         return binding.root
     }
 }
