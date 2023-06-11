@@ -10,15 +10,17 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/btn_login">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{facility.name}"
-            android:textAppearance="@style/btn_login_text_style"
-            android:background="@drawable/btn_login"
-            android:padding="5dp"
+            android:textAppearance="@style/basic_white_bold"
+            android:textSize="14sp"
             android:layout_margin="5dp"/>
 
     </LinearLayout>

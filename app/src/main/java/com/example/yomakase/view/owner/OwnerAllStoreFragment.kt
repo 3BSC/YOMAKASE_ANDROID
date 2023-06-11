@@ -42,9 +42,6 @@ class OwnerAllStoreFragment : Fragment() {
         binding.indicator.setViewPager(binding.vpStore)
         binding.vpStore.adapter!!.registerAdapterDataObserver(binding.indicator.adapterDataObserver)
 
-        binding.appCompatButton.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.action_ownerAllStore_to_ownerManageStoreFragment)
-        }
 
         return binding.root
     }

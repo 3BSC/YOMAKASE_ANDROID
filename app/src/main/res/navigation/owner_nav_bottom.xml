@@ -42,6 +42,9 @@
         <action
             android:id="@+id/action_ownerManageStoreFragment_to_ownerManageReservationFragment"
             app:destination="@id/ownerManageReservationFragment" />
+        <action
+            android:id="@+id/action_ownerManageStoreFragment_to_ownerEditStoreInfoFragment"
+            app:destination="@id/ownerEditStoreInfoFragment" />
     </fragment>
 
     <fragment
@@ -55,5 +58,10 @@
         android:name="com.example.yomakase.view.owner.OwnerManageReservationFragment"
         android:label="OwnerManageReservationFragment"
         tools:layout="@layout/fragment_owner_manage_reservation"/>
+    <fragment
+        android:id="@+id/ownerEditStoreInfoFragment"
+        android:name="com.example.yomakase.view.owner.OwnerEditStoreInfoFragment"
+        android:label="fragment_owner_edit_store_info"
+        tools:layout="@layout/fragment_owner_edit_store_info" />
 
 </navigation>
