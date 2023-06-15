@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_bottom"
+    app:startDestination="@id/generalRestaurant">
+
+    <fragment
+        android:id="@+id/generalRestaurant"
+        android:name="com.example.yomakase.view.general.GeneralAllStoreFragment"
+        android:label="AllStoreFragment" />
+    <fragment
+        android:id="@+id/generalReservation"
+        android:name="com.example.yomakase.view.general.GeneralReservationFragment"
+        android:label="fragment_reservation_general"
+        tools:layout="@layout/fragment_general_reservation" />
+    <fragment
+        android:id="@+id/generalProfile"
+        android:name="com.example.yomakase.view.general.GeneralProfileFragment"
+        android:label="fragment_profile_general"
+        tools:layout="@layout/fragment_general_profile" >
+        <action
+            android:id="@+id/action_generalProfile_to_generalEditProfile"
+            app:destination="@id/generalEditProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/generalEditProfile"
+        android:name="com.example.yomakase.view.general.GeneralEditProfileFragment"
+        android:label="GeneralEditProfileFragment"
+        tools:layout="@layout/fragment_general_edit_profile"/>
+</navigation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ownerAllStore"
+        android:icon="@drawable/_ic_restaurant_clicked"
+        android:title="식당"/>
+
+    <item
+        android:id="@+id/ownerProfile"
+        android:icon="@drawable/_ic_profile_clicked"
+        android:title="내 정보"/>
+</menu>

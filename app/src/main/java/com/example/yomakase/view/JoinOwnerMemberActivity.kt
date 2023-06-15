@@ -35,7 +35,7 @@ import com.example.yomakase.model.rv_item.DialogFacility
 import com.example.yomakase.model.rv_item.Price
 import com.example.yomakase.viewmodel.JoinOwnerMemberViewModel
 
-class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface {
+class JoinOwnerMemberActivity : AppCompatActivity(){
 
     private lateinit var binding: ActivityJoinOwnerMemberBinding
     private lateinit var viewModel: JoinOwnerMemberViewModel
@@ -56,12 +56,6 @@ class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface {
     private var email : String? = null
     private var nickname: String? = null
     private var birth: String? = null
-
-    private lateinit var priceList : MutableList<Price>
-    private lateinit var priceAdapter: PriceAdapter
-    private lateinit var closedDays: MutableList<ClosedDay>
-    private var selectedFacilities = mutableListOf<DialogFacility>()
-    private var facilityDialog : FacilityDialog = FacilityDialog(this, this, selectedFacilities.toList()).apply { isCancelable = false }
 
     private val galleryPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { isPermitted ->
@@ -116,13 +110,9 @@ class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface {
     }
 
     private fun setUp(){
-        setUpClosedDayRv()
-        setUpPriceRv()
         setupSpinnerCategory()
         setupSpinnerEmailDomain()
-        setupSpinnerPrice()
         setupSpinnerHandler()
-        setUpFacilityRv()
     }
 
     fun reqJoinOwnerMember(view: View){
@@ -225,16 +215,6 @@ class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface {
         return true
     }
 
-    private fun setupSpinnerPrice() {
-        val priceDays = resources.getStringArray(R.array.sp_price_day)
-        val priceTimes = resources.getStringArray(R.array.sp_price_time)
-        val priceDayAdapter = ArrayAdapter(this, R.layout.spinner_text, priceDays)
-        val priceTimeAdapter = ArrayAdapter(this, R.layout.spinner_text, priceTimes)
-        priceDayAdapter.setDropDownViewResource(R.layout.spinner_dropdown)
-        priceTimeAdapter.setDropDownViewResource(R.layout.spinner_dropdown)
-        binding.spPriceDay.adapter = priceDayAdapter
-        binding.spPriceTime.adapter = priceTimeAdapter
-    }
 
     private fun setupSpinnerCategory() {
         val categories = resources.getStringArray(R.array.sp_category)
@@ -274,20 +254,6 @@ class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface {
         DatePickerDialog(this, android.R.style.Theme_Holo_Light_Dialog_NoActionBar
             ,dateSetListener, cal.get(Calendar.YEAR),cal.get(Calendar.MONTH),cal.get(Calendar.DAY_OF_MONTH)).show()
     }
-    fun timePicker(view: View){
-        val cal = Calendar.getInstance()
-        val timeSetListener = TimePickerDialog.OnTimeSetListener {time, hour, min ->
-            val timeFormatted = "${hour.toString().padStart(2, '0')} : ${min.toString().padStart(2, '0')}"
-            when(view.id){
-                R.id.tvOpeningHoursStart -> {binding.tvOpeningHoursStart.text = timeFormatted}
-                R.id.tvOpeningHoursEnd -> {binding.tvOpeningHoursEnd.text = timeFormatted}
-                R.id.tvBreakTimeStart -> {binding.tvBreakTimeStart.text = timeFormatted}
-                R.id.tvBreakTimeEnd -> {binding.tvBreakTimeEnd.text = timeFormatted}
-            }
-        }
-
-        TimePickerDialog(this, android.R.style.Theme_Holo_Light_Dialog_NoActionBar,timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE),false).show()
-    }
 
     fun visiblePassword(view: View){
         when(pwVisible){
@@ -306,74 +272,6 @@ class JoinOwnerMemberActivity : AppCompatActivity(), FacilityDialogInterface {
         binding.etPasswordCheck.setSelection(binding.etPasswordCheck.text!!.length)
     }
 
-    @SuppressLint("NotifyDataSetChanged")
-    private fun setUpPriceRv(){
-        priceList = mutableListOf()
-        priceAdapter = PriceAdapter(priceList, onClickRemoveBtn = { removePrice(it)})
-
-        binding.rvPrice.apply {
-            adapter = priceAdapter
-            layoutManager = LinearLayoutManager(applicationContext)
-        }
-    }
-
-    private fun setUpClosedDayRv(){
-        closedDays = mutableListOf()
-        var closedDayList = mutableListOf(
-            ClosedDay("일요일"), ClosedDay("월요일"), ClosedDay("화요일"), ClosedDay("수요일"),
-            ClosedDay("목요일"), ClosedDay("금요일"), ClosedDay("토요일"), ClosedDay("공휴일")
-        )
-        var closedDayAdapter = ClosedDayAdapter(closedDayList, onClickItemListener = {it, position ->
-            if(it.tag == "0"){
-                it.setBackgroundResource(R.drawable.btn_login)
-                it.tag = "1"
-                closedDays.add(closedDayList[position])
-            }else{
-                it.setBackgroundResource(R.drawable.btn_unclicked)
-                it.tag = "0"
-                closedDays.remove(closedDayList[position])
-            }
-        })
-        binding.rvClosedDays.apply {
-            adapter = closedDayAdapter
-            layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.HORIZONTAL, false)
-        }
-    }
-
-    @SuppressLint("NotifyDataSetChanged")
-    fun removePrice(price: Price) {
-        priceList.remove(price)
-        binding.rvPrice.adapter?.notifyDataSetChanged()
-    }
-
-    @SuppressLint("NotifyDataSetChanged")
-    fun addPrice(view: View){
-        priceList.add(
-            Price(
-                binding.spPriceDay.selectedItem.toString(),
-                binding.spPriceTime.selectedItem.toString(),
-                binding.etPrice.text.toString().toInt()
-            )
-        )
-        priceAdapter.notifyDataSetChanged()
-    }
-
-    private fun setUpFacilityRv(){
-        binding.rvFacilities.apply {
-            adapter = FacilityAdapter(selectedFacilities)
-            layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.HORIZONTAL ,false)
-        }
-    }
-
-    fun openFacilityDialog(view: View){
-        facilityDialog.preSelected = selectedFacilities.toList()
-        facilityDialog.show(this.supportFragmentManager, "Facility")
-    }
-
-    override fun onOkBtnClicked(selected: MutableList<DialogFacility>) {
-        selectedFacilities = selected
-        setUpFacilityRv()
-    }
 
     private fun getRealPathFromUri(uri: Uri): String{
         val buildName = Build.MANUFACTURER

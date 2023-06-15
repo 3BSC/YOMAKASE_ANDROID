@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/owner_nav_bottom"
+    app:startDestination="@id/ownerAllStore">
+
+    <fragment
+        android:id="@+id/ownerAllStore"
+        android:name="com.example.yomakase.view.owner.OwnerAllStoreFragment"
+        android:label="fragment_owner_all_store"
+        tools:layout="@layout/fragment_owner_all_store" >
+        <action
+            android:id="@+id/action_ownerAllStore_to_ownerManageStoreFragment"
+            app:destination="@id/ownerManageStoreFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ownerProfile"
+        android:name="com.example.yomakase.view.owner.OwnerProfileFragment"
+        android:label="fragment_owner_profile"
+        tools:layout="@layout/fragment_owner_profile" >
+        <action
+            android:id="@+id/action_ownerProfile_to_ownerEditProfileFragment"
+            app:destination="@id/ownerEditProfile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ownerEditProfile"
+        android:name="com.example.yomakase.view.owner.OwnerEditProfileFragment"
+        android:label="OwnerEditProfileFragment"
+        tools:layout="@layout/fragment_owner_edit_profile"/>
+
+    <fragment
+        android:id="@+id/ownerManageStoreFragment"
+        android:name="com.example.yomakase.view.owner.OwnerManageStoreFragment"
+        android:label="OwnerManageStoreFragment"
+        tools:layout="@layout/fragment_owner_manage_store">
+        <action
+            android:id="@+id/action_ownerManageStoreFragment_to_ownerManageLineupFragment"
+            app:destination="@id/ownerManageLineupFragment" />
+        <action
+            android:id="@+id/action_ownerManageStoreFragment_to_ownerManageReservationFragment"
+            app:destination="@id/ownerManageReservationFragment" />
+        <action
+            android:id="@+id/action_ownerManageStoreFragment_to_ownerEditStoreInfoFragment"
+            app:destination="@id/ownerEditStoreInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ownerManageLineupFragment"
+        android:name="com.example.yomakase.view.owner.OwnerManageLineupFragment"
+        android:label="OwnerManageLineupFragment"
+        tools:layout="@layout/fragment_owner_manage_lineup"/>
+
+    <fragment
+        android:id="@+id/ownerManageReservationFragment"
+        android:name="com.example.yomakase.view.owner.OwnerManageReservationFragment"
+        android:label="OwnerManageReservationFragment"
+        tools:layout="@layout/fragment_owner_manage_reservation"/>
+    <fragment
+        android:id="@+id/ownerEditStoreInfoFragment"
+        android:name="com.example.yomakase.view.owner.OwnerEditStoreInfoFragment"
+        android:label="fragment_owner_edit_store_info"
+        tools:layout="@layout/fragment_owner_edit_store_info" />
+
+</navigation>
